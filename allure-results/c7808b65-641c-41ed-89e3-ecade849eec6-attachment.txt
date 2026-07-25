@@ -1,0 +1,27 @@
+13
+Login
+Register
+Forgotten Password
+My Account
+Address Book
+Wish List
+Order History
+Downloads
+Recurring Payments
+Reward Points
+Returns
+Transactions
+Newsletter
+#login
+#register
+#forgotten-password
+#my-account
+#address-book
+#wish-list
+#order-history
+#downloads
+#recurring-payments
+#reward-points
+#returns
+#transactions
+#newsletter
