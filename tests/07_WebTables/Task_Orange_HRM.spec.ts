@@ -8,10 +8,7 @@ test("Verify Webtable dynamic", async({page})=>{
 
     await page.goto("https://awesomeqa.com/hr/web/index.php/auth/login");
 
-    /* await page.locator('//input[@name="username"]').fill("admin");
-    await page.locator('//input[@name="password"]').fill("Awesomeqa@4321");
-    await page.getByRole("button").click(); */
-
+    
     await page.getByRole("textbox", { name: "Username" }).fill("admin");
     await page.getByRole("textbox", { name: "Password" }).fill("Awesomeqa@4321");
     await page.getByRole("button", { name: "Login" }).click();
