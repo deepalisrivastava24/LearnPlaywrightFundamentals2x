@@ -1,0 +1,6 @@
+locator('table[summary="Sample Table"] tbody tr')
+[ 'UAE', 'Dubai', '829m', '2010', '1', '\n' ]
+[ 'Saudi Arabia', 'Mecca', '601m', '2012', '2', '\n' ]
+[ 'Taiwan', 'Taipei', '509m', '2004', '3', '\n' ]
+[ 'China', 'Shanghai', '492m', '2008', '4', '\n' ]
+[]

@@ -21,7 +21,7 @@ test('Verify element by filter', async({page})=>{
 
     const rightPanelLinks = await page.locator("a.list-group-item").all();
     for(const links of rightPanelLinks){
-        console.log(await links.getAttribute("href"));
+        console.log(await links.getAttribute("href")); 
     }
 
 

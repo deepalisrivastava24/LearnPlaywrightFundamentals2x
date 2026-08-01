@@ -1,0 +1,1 @@
+locator('table[summary="Sample Table"] tbody tr')

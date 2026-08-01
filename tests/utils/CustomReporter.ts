@@ -1,8 +1,9 @@
 /**
  * Custom TTA Reporter for Playwright
- * @author Deepali Srivastava
+ * @author Pramod Dutta
  * @website https://thetestingacademy.com
  * @version 1.0.0
+ * @license : MIT
  * @description Custom HTML Reporter for Playwright Test Automation Framework
  */
 
@@ -17,7 +18,7 @@ import {
 } from '@playwright/test/reporter';
 import * as fs from 'fs';
 import * as path from 'path';
-import { exec } from 'child_process';
+import { spawn } from 'child_process';
 
 interface StepData {
     title: string;
@@ -81,6 +82,7 @@ class CustomTTAReporter implements Reporter {
     private testStartTimeMap: Map<string, number> = new Map();
     private testStepCounterMap: Map<string, number> = new Map();
     private testCounter: number = 0;
+    private testIndexMap: Map<string, number> = new Map();
     private runningTests: Map<string, TestData> = new Map();
     private completedTestIds: Set<string> = new Set();
 
@@ -117,6 +119,9 @@ class CustomTTAReporter implements Reporter {
         this.testStartTimeMap.set(test.id, Date.now());
         this.testStepCounterMap.set(test.id, 0);
         this.testCounter++;
+        // Snapshot this test's index now — with parallel workers, testCounter keeps
+        // advancing as other tests begin, so reading it in onTestEnd collides artifacts.
+        this.testIndexMap.set(test.id, this.testCounter);
 
         const testFile = test.location.file.split('/').pop() || '';
         console.log(`\n▶️  STARTING: ${test.title}`);
@@ -225,6 +230,10 @@ class CustomTTAReporter implements Reporter {
         }
         console.log(`\n   📊 Running Total: ✅ ${this.suiteStats.passed} | ❌ ${this.suiteStats.failed} | ⏭️ ${this.suiteStats.skipped}`);
 
+        const testIndex = this.testIndexMap.get(test.id) ?? ++this.testCounter;
+        // Retries reuse test.id — suffix them so attempt N doesn't clobber attempt N-1.
+        const artifactId = result.retry > 0 ? `${testIndex}r${result.retry}` : `${testIndex}`;
+
         const currentTestSteps = this.testStepsMap.get(test.id) || [];
         const testLogs = this.collectTestLogs(result);
         this.associateLogsWithSteps(test, result, currentTestSteps, testLogs);
@@ -234,9 +243,21 @@ class CustomTTAReporter implements Reporter {
         let videoPath: string | undefined;
         let tracePath: string | undefined;
 
+        if (result.attachments && result.attachments.length > 0) {
+            console.log(`   📎 Attachments for ${test.title}: ${result.attachments.length}`);
+            for (const attachment of result.attachments) {
+                console.log(`     - attachment: name=${attachment.name || 'unknown'} type=${attachment.contentType || 'unknown'} path=${attachment.path || 'none'} hasBody=${!!attachment.body}`);
+            }
+        }
+
         for (const attachment of result.attachments) {
-            if (attachment.contentType === 'image/png') {
-                const screenshotName = `screenshot_${this.testCounter}_${screenshots.length + 1}.png`;
+            const contentType = attachment.contentType?.toLowerCase() || '';
+            const attachmentPath = attachment.path || '';
+            const attachmentName = attachment.name?.toLowerCase() || '';
+
+            if (contentType.startsWith('image/') || attachmentPath.endsWith('.png') || attachmentPath.endsWith('.jpg') || attachmentPath.endsWith('.jpeg')) {
+                const extension = attachmentPath.endsWith('.png') ? 'png' : attachmentPath.endsWith('.jpg') ? 'jpg' : attachmentPath.endsWith('.jpeg') ? 'jpeg' : 'png';
+                const screenshotName = `screenshot_${artifactId}_${screenshots.length + 1}.${extension}`;
                 const destPath = path.join('tta-report', 'screenshots', screenshotName);
                 const destDir = path.dirname(destPath);
                 if (!fs.existsSync(destDir)) {
@@ -248,39 +269,48 @@ class CustomTTAReporter implements Reporter {
                     } else if (attachment.body) {
                         fs.writeFileSync(destPath, attachment.body);
                     }
-                    screenshots.push({ name: attachment.name || `Screenshot ${screenshots.length + 1}`, path: `screenshots/${screenshotName}` });
+                    const screenshotPath = `screenshots/${screenshotName}`;
+                    screenshots.push({ name: attachment.name || `Screenshot ${screenshots.length + 1}`, path: screenshotPath });
                     if (attachment.name) {
-                        stepScreenshots.set(attachment.name, `screenshots/${screenshotName}`);
+                        stepScreenshots.set(attachment.name, screenshotPath);
                     }
                 } catch {
                     console.warn(`Failed to save screenshot: ${attachment.name}`);
                 }
             }
 
-            if (attachment.contentType === 'video/webm' && attachment.path) {
-                const videoName = `video_${this.testCounter}.webm`;
+            if (contentType.startsWith('video/') || attachmentPath.endsWith('.webm')) {
+                const videoName = `video_${artifactId}.webm`;
                 const destPath = path.join('tta-report', 'videos', videoName);
                 const destDir = path.dirname(destPath);
                 if (!fs.existsSync(destDir)) {
                     fs.mkdirSync(destDir, { recursive: true });
                 }
                 try {
-                    fs.copyFileSync(attachment.path, destPath);
+                    if (attachment.path) {
+                        fs.copyFileSync(attachment.path, destPath);
+                    } else if (attachment.body) {
+                        fs.writeFileSync(destPath, attachment.body);
+                    }
                     videoPath = `videos/${videoName}`;
                 } catch {
                     console.warn(`Failed to copy video: ${attachment.path}`);
                 }
             }
 
-            if (attachment.name === 'trace' && attachment.path) {
-                const traceName = `trace_${this.testCounter}.zip`;
+            if (attachmentName.includes('trace') || contentType === 'application/zip' || attachmentPath.endsWith('.zip')) {
+                const traceName = `trace_${artifactId}.zip`;
                 const destPath = path.join('tta-report', 'traces', traceName);
                 const destDir = path.dirname(destPath);
                 if (!fs.existsSync(destDir)) {
                     fs.mkdirSync(destDir, { recursive: true });
                 }
                 try {
-                    fs.copyFileSync(attachment.path, destPath);
+                    if (attachment.path) {
+                        fs.copyFileSync(attachment.path, destPath);
+                    } else if (attachment.body) {
+                        fs.writeFileSync(destPath, attachment.body);
+                    }
                     tracePath = `traces/${traceName}`;
                 } catch {
                     console.warn(`Failed to copy trace: ${attachment.path}`);
@@ -345,6 +375,8 @@ class CustomTTAReporter implements Reporter {
             errorStack: result.error?.stack,
             tags: tagMatches,
         };
+
+        console.log(`   📌 TestData generated for ${test.title}: screenshots=${testData.screenshots.length} video=${testData.video || 'none'} trace=${testData.trace || 'none'}`);
 
         this.testResults.push(testData);
 
@@ -425,20 +457,46 @@ class CustomTTAReporter implements Reporter {
 
         console.log('\n📊 Generating TTA HTML Report...');
         await this.generateReport();
-        this.openReportInBrowser(this.outputFile);
         console.log(`✅ Report generated: ${this.outputFile}`);
+        this.openReportInBrowser();
     }
 
-    private openReportInBrowser(filePath: string): void {
-        const resolvedPath = path.resolve(process.cwd(), filePath);
+    private openReportInBrowser(): void {
+        const reportPath = path.resolve(this.outputFile);
+        const indexPath = path.resolve(path.dirname(reportPath), 'index.html');
+        const targetPath = fs.existsSync(indexPath) ? indexPath : reportPath;
 
         if (process.platform === 'win32') {
-            exec(`start "" "${resolvedPath}"`);
-        } else if (process.platform === 'darwin') {
-            exec(`open "${resolvedPath}"`);
-        } else {
-            exec(`xdg-open "${resolvedPath}"`);
+            this.openReportOnWindows(targetPath);
+            return;
         }
+
+        if (process.platform === 'darwin') {
+            this.spawnOpenCommand('open', [targetPath], reportPath);
+            return;
+        }
+
+        this.spawnOpenCommand('xdg-open', [targetPath], reportPath);
+    }
+
+    private openReportOnWindows(targetPath: string): void {
+        this.spawnOpenCommand('explorer', [targetPath], targetPath, () => {
+            this.spawnOpenCommand('cmd', ['/c', 'start', '', targetPath], targetPath, () => {
+                this.spawnOpenCommand('powershell', ['-NoProfile', '-Command', 'Start-Process', '-FilePath', targetPath], targetPath);
+            });
+        });
+    }
+
+    private spawnOpenCommand(command: string, args: string[], reportPath: string, onError?: () => void): void {
+        const child = spawn(command, args, { detached: true, stdio: 'ignore' });
+        child.on('error', (error) => {
+            console.error(`❌ Failed to open custom report in browser with ${command}:`, error);
+            if (onError) {
+                onError();
+            }
+        });
+        child.unref();
+        console.log(`🌐 Opened report in browser using ${command}: ${reportPath}`);
     }
 
     private formatTime(date: Date): string {
@@ -1333,9 +1391,11 @@ class CustomTTAReporter implements Reporter {
             background: white;
             border-radius: var(--radius);
             box-shadow: var(--shadow-lg);
-            overflow: hidden;
+            overflow-x: auto;
+            overflow-y: hidden;
         }
         .test-table {
+            min-width: 1200px;
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
@@ -1392,11 +1452,11 @@ class CustomTTAReporter implements Reporter {
         .col-author { width: 80px; }
         .col-group { width: 80px; }
         .col-tags { min-width: 120px; }
-        .col-file { min-width: 140px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gray-500); }
+        .col-file { min-width: 220px; max-width: 260px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gray-500); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .col-starttime, .col-endtime { width: 160px; font-size: 12px; color: var(--gray-500); }
         .col-duration { width: 80px; text-align: center; font-weight: 600; }
         .col-status { width: 100px; text-align: center; }
-        .col-screenshot, .col-video, .col-trace { width: 80px; text-align: center; }
+        .col-screenshot, .col-video, .col-trace { width: 120px; text-align: center; }
 
         .test-name-link {
             color: var(--dark);
@@ -1448,6 +1508,7 @@ class CustomTTAReporter implements Reporter {
             font-size: 12px;
             font-weight: 500;
             transition: all 0.2s;
+            white-space: nowrap;
         }
         .screenshot-link {
             background: var(--primary-bg);

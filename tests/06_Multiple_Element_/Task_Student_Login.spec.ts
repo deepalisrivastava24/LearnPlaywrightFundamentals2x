@@ -13,7 +13,9 @@ test('Verify element by filter', async({page})=>{
 
     let expectedUrl= "https://app.thetestingacademy.com/playwright/multiple_element_filter?email=abcd%40abcd.com&password=abcd&remember=yes#login-success"
     await expect(page).toHaveURL(expectedUrl);
-    console.log("Test Sucessful");   
+    //**/#/dashboard
+    console.log("Test Sucessful"); 
+    await page.pause();  
     
 
 
