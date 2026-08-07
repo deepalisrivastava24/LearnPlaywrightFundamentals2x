@@ -1,0 +1,8 @@
+Vehicle Output: {
+  "vehicleName": "Mauriti i10",
+  "ownerName": "Deepali",
+  "regNumber": "UP-12-AB-1234",
+  "vehicleType": "SUV",
+  "year": "2024",
+  "notes": "Good car with excellent mileage and features."
+}

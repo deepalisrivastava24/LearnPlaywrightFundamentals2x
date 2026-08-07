@@ -1,0 +1,280 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: 09_Frame_Iframe\01_Iframe_Part2.spec.ts >> Verify frame and iframe
+- Location: tests\09_Frame_Iframe\01_Iframe_Part2.spec.ts:3:5
+
+# Error details
+
+```
+Error: locator.fill: Error: strict mode violation: locator('#pact1') resolved to 2 elements:
+    1) <iframe id="pact1" height="400px" src="https://selectorshub.com/iframe-and-nested-iframe/"></iframe> aka locator('#pact1').first()
+    2) <iframe id="pact1" height="400px" src="https://selectorshub.com/iframe-and-nested-iframe/"></iframe> aka locator('section #pact1')
+
+Call log:
+  - waiting for locator('#pact1').contentFrame().locator('#inp_val')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - heading "Get free access to our advanced XPath & CSS course. Ends in -" [level=5] [ref=e7]:
+          - link "Get free access to our advanced XPath & CSS course. Ends in -" [ref=e8] [cursor=pointer]:
+            - /url: https://selectorshub.com/get-free-access-of-advanced-xpath-and-css-selector-paid-course/
+        - generic [ref=e10]:
+          - generic [ref=e11]: 09 Hrs
+          - generic [ref=e12]: 59 Min
+          - generic [ref=e13]: 57 Sec
+        - link "Claim It Here" [ref=e15] [cursor=pointer]:
+          - /url: https://selectorshub.com/get-free-access-of-advanced-xpath-and-css-selector-paid-course/
+          - generic [ref=e17]: Claim It Here
+      - generic [ref=e20]:
+        - link [ref=e22] [cursor=pointer]:
+          - /url: https://selectorshub.com
+        - navigation "Menu" [ref=e24]:
+          - generic "Menu Toggle" [ref=e25]:
+            - list [ref=e26]:
+              - listitem [ref=e27]:
+                - generic [ref=e28]:
+                  - generic [ref=e30]: Products
+                  - button "Open Products" [ref=e31]:
+                    - generic [ref=e32]:
+                      - img [ref=e33]
+                      - generic [ref=e35]: Open Products
+              - listitem [ref=e36]:
+                - generic [ref=e37]:
+                  - generic [ref=e39]: Pricing
+                  - button "Open Pricing" [ref=e40]:
+                    - generic [ref=e41]:
+                      - img [ref=e42]
+                      - generic [ref=e44]: Open Pricing
+              - listitem [ref=e45]:
+                - link "Courses" [ref=e47] [cursor=pointer]:
+                  - /url: /courses-recordings/
+                  - generic [ref=e48]: Courses
+              - listitem [ref=e49]:
+                - link "Practice" [ref=e51] [cursor=pointer]:
+                  - /url: /xpath-practice-page/
+                  - generic [ref=e52]: Practice
+              - listitem [ref=e53]:
+                - link "Meetup" [ref=e55] [cursor=pointer]:
+                  - /url: https://selectorshub.com/meetup
+                  - generic [ref=e56]: Meetup
+              - listitem [ref=e57]:
+                - generic [ref=e58]:
+                  - generic [ref=e60]: Resources
+                  - button "Open Resources" [ref=e61]:
+                    - generic [ref=e62]:
+                      - img [ref=e63]
+                      - generic [ref=e65]: Open Resources
+              - listitem [ref=e66]:
+                - link "Support" [ref=e68] [cursor=pointer]:
+                  - /url: /contact-us/
+                  - generic [ref=e69]: Support
+        - link [ref=e72] [cursor=pointer]:
+          - /url: "#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjIyNjU3IiwidG9nZ2xlIjpmYWxzZX0%3D"
+          - img [ref=e73]
+  - main [ref=e75]:
+    - generic [ref=e80]:
+      - heading "iframe and nested iframes" [level=6] [ref=e82]
+      - iframe [ref=e85]:
+        - generic [active] [ref=f1e1]:
+          - generic [ref=f1e7]:
+            - textbox "Enter your first crush name" [ref=f1e8]:
+              - /placeholder: First Crush
+            - button "Lost" [ref=f1e9]
+            - link "Get Free Access to Advanced XPath & CSS Selector Course" [ref=f1e10] [cursor=pointer]:
+              - /url: https://selectorshub.com/get-free-access-of-advanced-xpath-and-css-selector-paid-course/
+            - heading "Dare for you" [level=3] [ref=f1e11]
+            - iframe [ref=f1e12]:
+              - generic [active] [ref=f3e1]:
+                - generic [ref=f3e7]:
+                  - textbox "Current Crush Name" [ref=f3e8]
+                  - button "Connect now" [ref=f3e9]
+                  - heading "Heaven is here" [level=4] [ref=f3e10]
+                  - iframe [ref=f3e11]:
+                    - generic [active] [ref=f5e1]:
+                      - generic [ref=f5e7]:
+                        - textbox "Destiny" [ref=f5e8]
+                        - button "Close it" [ref=f5e9]
+                      - generic [ref=f5e10]: mobile
+                - generic [ref=f3e12]: mobile
+          - generic [ref=f1e13]: tablet
+  - contentinfo [ref=e86]:
+    - contentinfo [ref=e87]:
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - link "SelectorHub Logo" [ref=e92] [cursor=pointer]:
+              - /url: https://selectorshub.com
+              - img "SelectorHub Logo" [ref=e93]
+            - generic [ref=e94]:
+              - paragraph [ref=e95]: We’re Here to Enhance Your Web Testing—Start Now
+              - paragraph [ref=e96]: support@selectorshub.com
+          - generic [ref=e97]:
+            - heading "Free Tools" [level=4] [ref=e99]
+            - navigation "Menu" [ref=e101]:
+              - list [ref=e102]:
+                - listitem [ref=e103]:
+                  - link "SelectorsHub – Best Tool to auto generate Playwright Locators and Xpath" [ref=e104] [cursor=pointer]:
+                    - /url: https://selectorshub.com/selectorshub/
+                - listitem [ref=e105]:
+                  - link "TestCase Studio" [ref=e106] [cursor=pointer]:
+                    - /url: https://selectorshub.com/testcase-studio/
+                - listitem [ref=e107]:
+                  - link "Check My Links" [ref=e108] [cursor=pointer]:
+                    - /url: https://selectorshub.com/checkmylinks/
+                - listitem [ref=e109]:
+                  - link "Exploratory Tester" [ref=e110] [cursor=pointer]:
+                    - /url: https://selectorshub.com/exploratory-tester/
+                - listitem [ref=e111]:
+                  - link "Screenshot with URL" [ref=e112] [cursor=pointer]:
+                    - /url: https://selectorshub.com/screenshot-with-url/
+                - listitem [ref=e113]:
+                  - link "Page Load Timer" [ref=e114] [cursor=pointer]:
+                    - /url: https://selectorshub.com/page-load-timer/
+                - listitem [ref=e115]:
+                  - link "Testing Daily" [ref=e116] [cursor=pointer]:
+                    - /url: https://selectorshub.com/testing-daily/
+                - listitem [ref=e117]:
+                  - link "Auto Data Filler" [ref=e118] [cursor=pointer]:
+                    - /url: https://selectorshub.com/auto-data-filler/
+                - listitem [ref=e119]:
+                  - link "AutoTestData" [ref=e120] [cursor=pointer]:
+                    - /url: https://selectorshub.com/autotestdata/
+                - listitem [ref=e121]:
+                  - link "Automation Tool Analyzer" [ref=e122] [cursor=pointer]:
+                    - /url: https://selectorshub.com/automation-tool-analyzer/
+                - listitem [ref=e123]:
+                  - link "AI Post Creator" [ref=e124] [cursor=pointer]:
+                    - /url: https://selectorshub.com/ai-post-creator/
+          - generic [ref=e125]:
+            - heading "Paid Tools" [level=4] [ref=e127]
+            - navigation "Menu" [ref=e129]:
+              - list [ref=e130]:
+                - listitem [ref=e131]:
+                  - link "SelectorsHub Pro" [ref=e132] [cursor=pointer]:
+                    - /url: https://selectorshub.com/selectorshub-pro/
+                - listitem [ref=e133]:
+                  - link "TestCase Studio Pro" [ref=e134] [cursor=pointer]:
+                    - /url: https://selectorshub.com/testcase-studio-pro/
+                - listitem [ref=e135]:
+                  - link "Promote with us" [ref=e136] [cursor=pointer]:
+                    - /url: https://selectorshub.com/selectorshub-ads/
+          - generic [ref=e137]:
+            - heading "Resources" [level=4] [ref=e139]
+            - navigation "Menu" [ref=e141]:
+              - list [ref=e142]:
+                - listitem [ref=e143]:
+                  - link "Courses" [ref=e144] [cursor=pointer]:
+                    - /url: https://selectorshub.com/courses-recordings/
+                - listitem [ref=e145]:
+                  - link "Trainings" [ref=e146] [cursor=pointer]:
+                    - /url: https://selectorshub.com/bootcamp/
+                - listitem [ref=e147]:
+                  - link "Video Tutorials" [ref=e148] [cursor=pointer]:
+                    - /url: https://www.youtube.com/c/SelectorsHub?sub_confirmation=1
+                - listitem [ref=e149]:
+                  - link "Meetup" [ref=e150] [cursor=pointer]:
+                    - /url: https://selectorshub.com/meetup/
+                - listitem [ref=e151]:
+                  - link "SelectorsHub Offers" [ref=e152] [cursor=pointer]:
+                    - /url: https://selectorshub.com/offers/
+          - generic [ref=e153]:
+            - heading "Useful Links" [level=4] [ref=e155]
+            - navigation "Menu" [ref=e157]:
+              - list [ref=e158]:
+                - listitem [ref=e159]:
+                  - link "About Us" [ref=e160] [cursor=pointer]:
+                    - /url: https://selectorshub.com/team/
+                - listitem [ref=e161]:
+                  - link "Contact Us" [ref=e162] [cursor=pointer]:
+                    - /url: https://selectorshub.com/contact-us/
+                - listitem [ref=e163]:
+                  - link "Sponsors" [ref=e164] [cursor=pointer]:
+                    - /url: https://selectorshub.com/sponsors/
+                - listitem [ref=e165]:
+                  - link "Practice Page" [ref=e166] [cursor=pointer]:
+                    - /url: https://selectorshub.com/xpath-practice-page/
+                - listitem [ref=e167]:
+                  - link "Cancellation & Refund Policy" [ref=e168] [cursor=pointer]:
+                    - /url: https://selectorshub.com/cancellation-refund-policy/
+                - listitem [ref=e169]:
+                  - link "Certification" [ref=e170] [cursor=pointer]:
+                    - /url: https://selectorshub.com/certification/
+                - listitem [ref=e171]:
+                  - link "Privacy Policy" [ref=e172] [cursor=pointer]:
+                    - /url: https://selectorshub.com/privacy-policy/
+                - listitem [ref=e173]:
+                  - link "Terms of Service" [ref=e174] [cursor=pointer]:
+                    - /url: https://selectorshub.com/terms-of-service/
+        - generic [ref=e175]:
+          - generic [ref=e177]: Copyright © 2026 SelectorsHub ® . All rights reserved
+          - list [ref=e180]:
+            - listitem [ref=e181]:
+              - link "Youtube" [ref=e182] [cursor=pointer]:
+                - /url: https://www.youtube.com/c/SelectorsHub?sub_confirmation=1
+                - generic [ref=e183]: Youtube
+                - img [ref=e184]
+            - listitem [ref=e186]:
+              - link "Telegram" [ref=e187] [cursor=pointer]:
+                - /url: https://t.me/selectorshub
+                - generic [ref=e188]: Telegram
+                - img [ref=e189]
+            - listitem [ref=e191]:
+              - link "Instagram" [ref=e192] [cursor=pointer]:
+                - /url: https://www.instagram.com/SelectorsHub/
+                - generic [ref=e193]: Instagram
+                - img [ref=e194]
+            - listitem [ref=e196]:
+              - link "Linkedin" [ref=e197] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/selectorshub/about
+                - generic [ref=e198]: Linkedin
+                - img [ref=e199]
+            - listitem [ref=e201]:
+              - link "Facebook" [ref=e202] [cursor=pointer]:
+                - /url: https://www.facebook.com/selectorshub/
+                - generic [ref=e203]: Facebook
+                - img [ref=e204]
+            - listitem [ref=e206]:
+              - link "Twitter" [ref=e207] [cursor=pointer]:
+                - /url: https://x.com/SelectorsHub
+                - generic [ref=e208]: Twitter
+                - img [ref=e209]
+  - generic [ref=e211]: desktop
+```
+
+# Test source
+
+```ts
+  1  | import{test, expect, FrameLocator} from '@playwright/test';
+  2  | 
+  3  | test("Verify frame and iframe", async({page})=>{
+  4  | 
+  5  |     await page.goto("https://selectorshub.com/iframe-scenario/");
+  6  |     
+  7  |     let frame1 : FrameLocator = page.frameLocator("#pact1");
+  8  |     let frame2 : FrameLocator = frame1.frameLocator("#pact2");
+  9  |     let frame3 : FrameLocator = frame1.frameLocator("#pact3");
+  10 | 
+> 11 |     await frame1.locator("#inp_val").fill("Frame 1");
+     |                                      ^ Error: locator.fill: Error: strict mode violation: locator('#pact1') resolved to 2 elements:
+  12 |     await frame2.locator("#jex").fill("Frame 2");
+  13 |     await frame3.locator("#glaf").fill("Frame 3");
+  14 | 
+  15 | 
+  16 | 
+  17 | });
+```

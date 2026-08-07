@@ -1,0 +1,4 @@
+Total Frameset: 3
+Frame Name:sideFrame src:./side-frame.html
+Frame Name:mainFrame src:./main-frame.html
+Frame Name:footerFrame src:./footer-frame.html
