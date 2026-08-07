@@ -1,0 +1,2 @@
+alert type: prompt
+Alert message: I am a JS prompt

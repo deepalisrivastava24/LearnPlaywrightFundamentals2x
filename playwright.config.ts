@@ -36,13 +36,17 @@ export default defineConfig({
     screenshot: 'on',
     video: 'on',
     viewport: { width: 1280, height: 720 },
+    
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'],
+        viewport: { width: 1280, height: 720 },
+       },
+      
     },
 
     /* {

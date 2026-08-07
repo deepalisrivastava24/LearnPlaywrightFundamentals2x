@@ -1,0 +1,8 @@
+[
+  'Edit',   '⌘E',
+  'Cut',    '⌘X',
+  'Copy',   '⌘C',
+  'Paste',  '⌘V',
+  'Delete', '⌫',
+  'Quit',   '⌘Q'
+]

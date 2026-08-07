@@ -1,0 +1,2 @@
+alert type confirm
+Alert message I am a JS Confirm
