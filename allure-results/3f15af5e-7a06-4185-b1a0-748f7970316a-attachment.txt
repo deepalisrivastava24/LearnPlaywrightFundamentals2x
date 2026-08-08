@@ -1,0 +1,3 @@
+Before running testcase!
+Found 5 price elements
+Cheapest Mac Mini price on this page: ₹59900

@@ -1,0 +1,7 @@
+Before running testcase!
+Found 5 price elements
+titleText
+titleText
+titleText
+titleText
+titleText

@@ -1,0 +1,2 @@
+Open VWO dashboard using saved session — storageState applied, no login form hit
+Verify dashboard URL loaded — https://app.wingify.com/#/dashboard/get-started?accountId=1227004
