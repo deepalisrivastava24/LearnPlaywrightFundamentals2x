@@ -1,0 +1,11 @@
+Q1
+42
+Q2
+64
+Q3
+78
+Q4
+92
+Q5
+56
+Smallest bar with height 42
