@@ -34,11 +34,12 @@ test.describe('SVG Practice', () => {
 
             if (!isNaN(height) && height < smallestHeight) {
                 smallestHeight = height;
+                smallestQuarter = q;
                 
             }
         }
 
-        console.log(`Smallest bar with height ${smallestHeight}`)
+        console.log(`Smallest bar: ${smallestQuarter} with height ${smallestHeight}`)
     });
 
 });

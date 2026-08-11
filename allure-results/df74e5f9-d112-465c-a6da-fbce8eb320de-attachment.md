@@ -1,0 +1,133 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: 14_FileUpload\Task_File_Upload.spec.ts >> Grouping testcase >> Single File Upload
+- Location: tests\14_FileUpload\Task_File_Upload.spec.ts:18:9
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded while running "beforeEach" hook.
+```
+
+```
+Error: locator.fill: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('input[name=\'email\']')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - button "Dismiss banner" [ref=e4] [cursor=pointer]:
+      - img [ref=e5]
+    - generic [ref=e8]:
+      - generic [ref=e9]: LIVE
+      - generic [ref=e11]: 🚀 AI Tester Blueprint
+      - generic [ref=e12]: New Batch Launching
+      - generic [ref=e13]: "|"
+      - generic [ref=e14]: New Batch • 23 May 2026, 11:00 AM to 12:45 PM IST
+      - generic [ref=e15]: "|"
+      - generic [ref=e16]:
+        - generic [ref=e17]: ₹35,000
+        - generic [ref=e18]: ₹9,999
+        - generic [ref=e19]: 33% OFF
+      - generic [ref=e20]:
+        - img [ref=e21]
+        - text: "Code:"
+        - generic [ref=e23]: AITESTER
+      - generic [ref=e24]:
+        - button "Join" [ref=e25] [cursor=pointer]:
+          - img [ref=e26]
+          - text: Join
+        - link "Chat on WhatsApp" [ref=e31] [cursor=pointer]:
+          - /url: https://sdet.live/WhatsApp
+          - img [ref=e32]
+        - generic [ref=e34]:
+          - button "View announcement 1" [ref=e35] [cursor=pointer]
+          - button "View announcement 2" [ref=e36] [cursor=pointer]
+  - generic [ref=e37]:
+    - generic [ref=e40]:
+      - generic [ref=e42]:
+        - heading "Sign in to TheTestingAcademy" [level=1] [ref=e43]
+        - paragraph [ref=e44]: Welcome back! Please sign in to continue
+      - generic [ref=e45]:
+        - button "Sign in with Google Continue with Google" [ref=e48] [cursor=pointer]:
+          - generic [ref=e49]:
+            - img "Sign in with Google" [ref=e51]
+            - generic [ref=e52]: Continue with Google
+        - paragraph [ref=e55]: or
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e61]:
+              - generic [ref=e63]: Email address
+              - textbox "Email address" [active] [ref=e64]:
+                - /placeholder: Enter your email address
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: Password
+                  - generic:
+                    - textbox "Password":
+                      - /placeholder: Enter your password
+                    - button "Show password":
+                      - img
+          - button "Continue" [ref=e67] [cursor=pointer]:
+            - generic [ref=e68]:
+              - text: Continue
+              - img [ref=e69]
+    - link "← Back to Home" [ref=e71] [cursor=pointer]:
+      - /url: /
+  - button "Chat with support on WhatsApp" [ref=e72] [cursor=pointer]:
+    - img
+```
+
+# Test source
+
+```ts
+  1  | import{test, expect, Locator} from '@playwright/test'
+  2  | import path from 'path';
+  3  | import os from 'os';
+  4  | 
+  5  | const URL = 'https://app.thetestingacademy.com/student/settings';
+  6  | 
+  7  | test.describe('Grouping testcase', ()=>{    
+  8  | 
+  9  |     test.beforeEach(async ({ page }) => {
+  10 |     await page.goto('https://app.thetestingacademy.com/login'); // adjust to real login URL
+> 11 |     await page.locator("input[name='email']").fill('deepali.srivastava24@gmail.com');
+     |                                               ^ Error: locator.fill: Test timeout of 30000ms exceeded.
+  12 |     await page.locator("input[name='password']").fill('Livelife#2406');
+  13 |     await page.locator("button[type='submit']").click();
+  14 |         
+  15 |         await page.goto(URL);
+  16 |     });
+  17 | 
+  18 |     test('Single File Upload', async({page})=>{
+  19 |         
+  20 |         const filePath : string = path.join(os.homedir(),'Downloads','images2.jpg');
+  21 |         const fileInput: Locator = await page.locator("//input[@id='avatar-upload']");
+  22 |         await fileInput.setInputFiles(filePath);
+  23 | 
+  24 | 
+  25 |         await page.pause();
+  26 | 
+  27 |                  
+  28 |                
+  29 |        
+  30 |     });
+  31 | 
+  32 |     
+  33 | 
+  34 |     
+  35 | });
+```

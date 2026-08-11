@@ -1,0 +1,1 @@
+getByTestId('card-account-card').getByTestId('card-account-status')

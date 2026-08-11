@@ -1,0 +1,740 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: 14_FileUpload\Task_File_Upload.spec.ts >> Grouping testcase >> Single File Upload
+- Location: tests\14_FileUpload\Task_File_Upload.spec.ts:25:9
+
+# Error details
+
+```
+Error: locator.click: Unsupported token "{" while parsing css selector "getByRole('button', { name: 'Dismiss' })". Did you mean to CSS.escape it?
+Call log:
+  - waiting for getByRole('button', { name: 'Dismiss' })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic:
+  - generic:
+    - generic:
+      - button:
+        - img
+      - generic:
+        - generic: LIVE
+        - generic: 🚀 AI Tester Blueprint
+        - generic: New Batch Launching
+        - generic: "|"
+        - generic: New Batch • 23 May 2026, 11:00 AM to 12:45 PM IST
+        - generic: "|"
+        - generic:
+          - generic: ₹35,000
+          - generic: ₹9,999
+          - generic: 33% OFF
+        - generic:
+          - img
+          - text: "Code:"
+          - generic: AITESTER
+        - generic:
+          - button:
+            - img
+            - text: Join
+          - link:
+            - /url: https://sdet.live/WhatsApp
+            - img
+          - generic:
+            - button
+            - button
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: bright-raven-692
+                        - button:
+                          - img
+                          - text: "8"
+                      - generic:
+                        - img
+                        - text: Playwright
+                    - button:
+                      - img
+                      - generic: Toggle Sidebar
+                  - generic:
+                    - generic:
+                      - img
+                      - textbox:
+                        - /placeholder: Search...
+                - generic:
+                  - generic:
+                    - generic:
+                      - list:
+                        - listitem:
+                          - link:
+                            - /url: /student/dashboard
+                            - generic:
+                              - img
+                            - generic:
+                              - generic: Dashboard
+                        - generic:
+                          - listitem:
+                            - button [expanded]:
+                              - img
+                              - generic: Learn
+                              - img
+                          - generic:
+                            - list:
+                              - listitem:
+                                - link:
+                                  - /url: /student/skill-graph
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Skill Graph
+                                    - generic:
+                                      - generic: MVP
+                              - listitem:
+                                - link:
+                                  - /url: /student/my-process
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: My Process
+                              - listitem:
+                                - link:
+                                  - /url: /student/playground
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: AI Tester
+                              - listitem:
+                                - link:
+                                  - /url: /student/playwright
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Playwright
+                                    - generic:
+                                      - generic: Enrolled
+                              - listitem:
+                                - link:
+                                  - /url: /student/selenium
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Selenium
+                              - listitem:
+                                - link:
+                                  - /url: /student/books
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Books
+                                    - generic:
+                                      - generic: NEW
+                        - generic:
+                          - listitem:
+                            - button [expanded]:
+                              - img
+                              - generic: Practice
+                              - img
+                          - generic:
+                            - list:
+                              - listitem:
+                                - link:
+                                  - /url: /student/coding-practice
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Coding Practice
+                                    - generic:
+                                      - generic: NEW
+                              - listitem:
+                                - link:
+                                  - /url: /student/live-coding-test
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Live Coding Test
+                                    - generic:
+                                      - generic: NEW
+                              - listitem:
+                                - link:
+                                  - /url: /student/live-test
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Live Test
+                              - listitem:
+                                - link:
+                                  - /url: /student/challenges
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: QA Battle
+                                    - generic:
+                                      - generic: 400+
+                              - listitem:
+                                - link:
+                                  - /url: /student/ai-interview
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: AI Interview
+                                    - generic:
+                                      - generic: BETA
+                              - listitem:
+                                - link:
+                                  - /url: /student/interview-qa
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Crack QA Interview
+                        - generic:
+                          - listitem:
+                            - button [expanded]:
+                              - img
+                              - generic: Community
+                              - img
+                          - generic:
+                            - list:
+                              - listitem:
+                                - link:
+                                  - /url: /student/leaderboard
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Leaderboard
+                              - listitem:
+                                - link:
+                                  - /url: /student/referral
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Referrals
+                        - generic:
+                          - listitem:
+                            - button [expanded]:
+                              - img
+                              - generic: Account
+                              - img
+                          - generic:
+                            - list:
+                              - listitem:
+                                - link:
+                                  - /url: /student/achievements
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Achievements
+                              - listitem:
+                                - link:
+                                  - /url: /student/portfolio
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Portfolio
+                              - listitem:
+                                - link:
+                                  - /url: /student/settings
+                                  - generic:
+                                    - img
+                                  - generic:
+                                    - generic: Settings
+                - generic:
+                  - button:
+                    - img
+                    - generic: Product tour
+                  - button:
+                    - img
+                    - generic: Logout
+          - main:
+            - generic:
+              - generic:
+                - button:
+                  - img
+                  - generic: "1"
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - heading [level=1]:
+                          - img
+                          - text: Dashboard
+                        - paragraph: Track your daily progress, celebrate milestones, and build lasting habits ✨
+                        - generic:
+                          - generic:
+                            - img
+                            - generic: 4 total entries
+                          - generic:
+                            - img
+                            - generic: 0 day streak
+                      - button:
+                        - img
+                        - text: Add Today's Learning
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - generic: "4"
+                          - generic: Learning Days
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - generic: "1"
+                          - generic: Projects Created
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - generic: "0"
+                          - generic: Questions Asked
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - generic: "0"
+                          - generic: Day Streak
+                - generic:
+                  - tablist:
+                    - tab [selected]:
+                      - img
+                      - text: Calendar View
+                    - tab:
+                      - img
+                      - text: GitHub Activity
+                    - tab:
+                      - img
+                      - text: List View
+                  - tabpanel:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading [level=3]:
+                            - img
+                            - text: Recent Learning Activities
+                          - button:
+                            - text: View All
+                            - img
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img
+                                - generic: Wed, Jun 10
+                                - generic: 6/10/2026
+                              - heading [level=4]: Call Backs
+                              - generic:
+                                - generic:
+                                  - img
+                                  - text: Notes
+                              - paragraph: function Call Back, call back hell ---METADATA--- confidence:3
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img
+                                - generic: Wed, May 13
+                                - generic: 5/13/2026
+                              - heading [level=4]: TBZ and Hoisting
+                              - generic:
+                                - generic:
+                                  - img
+                                  - text: Notes
+                              - paragraph: TBZ and hoisting, litral
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img
+                                - generic: Mon, May 11
+                                - generic: 5/11/2026
+                              - heading [level=4]: var, let & const
+                              - generic:
+                                - generic:
+                                  - img
+                                  - text: Notes
+                              - paragraph: var, let & const
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img
+                                - generic: Mon, May 4
+                                - generic: 5/4/2026
+                              - heading [level=4]: 4th May - JavaScript Learning
+                              - generic:
+                                - generic:
+                                  - img
+                                  - text: GitHub
+                                - generic:
+                                  - img
+                                  - text: Notes
+                              - paragraph: installed visual studio code, code runner,
+                    - generic:
+                      - generic:
+                        - generic:
+                          - heading [level=2]: August 2026
+                          - button:
+                            - img
+                            - text: Add Today's Learning
+                        - generic:
+                          - button:
+                            - img
+                          - button: Today
+                          - button:
+                            - img
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Sun
+                            - generic: Mon
+                            - generic: Tue
+                            - generic: Wed
+                            - generic: Thu
+                            - generic: Fri
+                            - generic: Sat
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "1"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "2"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "3"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "4"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "5"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "6"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "7"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "8"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "9"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "10"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "11"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "12"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "13"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "14"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "15"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "16"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "17"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "18"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "19"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "20"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "21"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "22"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "23"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "24"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "25"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "26"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "27"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "28"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "29"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "30"
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: "31"
+                                - generic:
+                                  - img
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: "0"
+                            - generic: Learning Days This Month
+                        - generic:
+                          - generic:
+                            - generic: "1"
+                            - generic: GitHub Repositories
+                        - generic:
+                          - generic:
+                            - generic: "0"
+                            - generic: Questions & Doubts
+                        - generic:
+                          - generic:
+                            - generic: "4"
+                            - generic: Total Entries
+    - button:
+      - img
+  - dialog "Live Batch Announcement" [ref=e2]:
+    - heading "Live Batch Announcement" [level=2] [ref=e3]
+    - generic [ref=e4]:
+      - img [ref=e6]
+      - button "Dismiss" [active] [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+      - generic [ref=e12]:
+        - generic [ref=e13]: LIVE
+        - generic [ref=e15]: Batch Starting Soon!
+        - generic [ref=e16]: New Batch Launching
+      - heading "🚀 AI Tester Blueprint" [level=2] [ref=e17]
+      - paragraph [ref=e18]: 10-Week Program • Sat & Sun, 11:00 AM – 12:45 PM IST
+      - generic [ref=e19]:
+        - generic [ref=e20]: ₹35,000
+        - generic [ref=e21]: ₹9,999
+        - generic [ref=e22]: SAVE 33%
+      - generic [ref=e23]:
+        - img [ref=e24]
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - generic [ref=e29]: "0"
+            - generic [ref=e30]: Days
+          - generic [ref=e31]: ":"
+          - generic [ref=e32]:
+            - generic [ref=e33]: "0"
+            - generic [ref=e34]: Hours
+          - generic [ref=e35]: ":"
+          - generic [ref=e36]:
+            - generic [ref=e37]: "0"
+            - generic [ref=e38]: Min
+          - generic [ref=e39]: ":"
+          - generic [ref=e40]:
+            - generic [ref=e41]: "0"
+            - generic [ref=e42]: Sec
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: ✅
+          - text: 10-Week Program
+        - generic [ref=e46]:
+          - generic [ref=e47]: ✅
+          - text: Doubt Sessions
+        - generic [ref=e48]:
+          - generic [ref=e49]: ✅
+          - text: Job Assistance
+        - generic [ref=e50]:
+          - generic [ref=e51]: ✅
+          - text: Bonus Courses
+      - generic [ref=e52]:
+        - img [ref=e53]
+        - generic [ref=e55]: Use code
+        - generic [ref=e56]: AITESTER
+      - generic [ref=e57]:
+        - button "Join Live Batch Now" [ref=e58] [cursor=pointer]:
+          - img [ref=e59]
+          - text: Join Live Batch Now
+        - link "Chat on WhatsApp" [ref=e64] [cursor=pointer]:
+          - /url: https://sdet.live/WhatsApp
+          - img [ref=e65]
+      - paragraph [ref=e67]: Starts May 23, 2026
+      - generic [ref=e68]:
+        - button "View announcement 1" [ref=e69] [cursor=pointer]
+        - button "View announcement 2" [ref=e70] [cursor=pointer]
+    - button "Close" [ref=e71] [cursor=pointer]:
+      - img [ref=e72]
+      - generic [ref=e75]: Close
+```
+
+# Test source
+
+```ts
+  1  | import{test, expect, Locator} from '@playwright/test'
+  2  | import path from 'path';
+  3  | import os from 'os';
+  4  | 
+  5  | const URL = 'https://app.thetestingacademy.com/student/settings';
+  6  | 
+  7  | test.describe('Grouping testcase', ()=>{    
+  8  | 
+  9  |     test.beforeEach(async ({ page }) => {
+  10 |     await page.goto('https://app.thetestingacademy.com/login'); // adjust to real login URL
+  11 |     await page.locator("input[name='identifier']").fill('deepali.srivastava24@gmail.com');
+  12 |     await page.locator("input[name='password']").fill('Livelife#2406');
+  13 |     await page.locator("//div[@class='cl-internal-1pnppin']").click();
+  14 |         await page.pause();
+> 15 |         page.locator("getByRole('button', { name: 'Dismiss' })").click();
+     |                                                                  ^ Error: locator.click: Unsupported token "{" while parsing css selector "getByRole('button', { name: 'Dismiss' })". Did you mean to CSS.escape it?
+  16 |         
+  17 |         const dismissBtn = page.getByRole('button', { name: 'Dismiss' });
+  18 |         if (await dismissBtn.isVisible().catch(() => false)) {
+  19 |             await dismissBtn.click();
+  20 |         }
+  21 |         await page.goto(URL);
+  22 |         
+  23 |     });
+  24 | 
+  25 |     test('Single File Upload', async({page})=>{
+  26 |         
+  27 |         const filePath : string = path.join(os.homedir(),'Downloads','images2.jpg');
+  28 |         const fileInput: Locator = await page.locator("//input[@id='avatar-upload']");
+  29 |         await fileInput.setInputFiles(filePath);
+  30 | 
+  31 | 
+  32 |         await page.pause();
+  33 | 
+  34 |                  
+  35 |                
+  36 |        
+  37 |     });
+  38 | 
+  39 |     
+  40 | 
+  41 |     
+  42 | });
+```

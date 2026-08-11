@@ -1,0 +1,1167 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: 14_FileUpload\02_Multiple_File_Upload.spec.ts >> Grouping testcase >> Single File Upload
+- Location: tests\14_FileUpload\02_Multiple_File_Upload.spec.ts:13:9
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('.pf-v6-c-button pf-m-secondary')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic:
+    - generic [ref=e4]:
+      - img [ref=e6]
+      - 'heading "Info alert: Website update" [level=4] [ref=e8]':
+        - generic [ref=e9]: "Info alert:"
+        - text: Website update
+      - 'button "Close Info alert: alert: Website update" [ref=e11] [cursor=pointer]':
+        - img [ref=e13]
+      - generic [ref=e15]: To make it easier for you to find what you need on PatternFly.org, we've redesigned our website navigation menu.
+      - generic [ref=e16]:
+        - link "Learn more" [ref=e17] [cursor=pointer]:
+          - /url: https://medium.com/patternfly/a-new-path-for-patternfly-org-b3536f514f2f
+          - generic [ref=e18]: Learn more
+        - link "Share your feedback" [ref=e19] [cursor=pointer]:
+          - /url: https://www.feedback.redhat.com/jfe/form/SV_9MKBjq8H7muINMy
+          - generic [ref=e20]: Share your feedback
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - text: We use cookies on our websites to deliver our online services. Details about how we use cookies and how you may disable them are set out in our
+        - link "Privacy Statement" [ref=e27] [cursor=pointer]:
+          - /url: //www.redhat.com/en/about/privacy-policy
+        - text: . By using this website you agree to our use of cookies.
+      - button "Close banner" [ref=e29] [cursor=pointer]:
+        - img [ref=e31]:
+          - img [ref=e32]
+  - generic [ref=e34]:
+    - link "Skip to content" [ref=e36] [cursor=pointer]:
+      - /url: "#ws-page-main"
+      - generic [ref=e37]: Skip to content
+    - banner [ref=e38]:
+      - generic [ref=e39]:
+        - button "Global navigation" [expanded] [ref=e41] [cursor=pointer]:
+          - img [ref=e43]:
+            - img [ref=e44]
+        - link "PatternFly" [ref=e47] [cursor=pointer]:
+          - /url: /
+          - img "PatternFly" [ref=e48]
+      - generic [ref=e69]:
+        - button "Expandable search input toggle" [ref=e74] [cursor=pointer]:
+          - img [ref=e76]:
+            - img [ref=e77]
+        - link "PatternFly GitHub page" [ref=e80] [cursor=pointer]:
+          - /url: //github.com/patternfly
+          - img [ref=e82]
+        - 'button "Theme selection, current: System" [ref=e85] [cursor=pointer]':
+          - img [ref=e89]
+          - img [ref=e93]
+        - button "Release 6.6.1" [ref=e96] [cursor=pointer]:
+          - generic [ref=e97]: Release 6.6.1
+          - img [ref=e100]
+    - navigation "Side Nav" [ref=e105]:
+      - region "Learn" [ref=e106]:
+        - heading "Learn" [level=2] [ref=e107]
+        - list [ref=e108]:
+          - list "Learn navigation" [ref=e109]:
+            - listitem [ref=e110]:
+              - link "About us" [ref=e111] [cursor=pointer]:
+                - /url: /about-us
+                - generic [ref=e113]: About us
+            - listitem [ref=e114]:
+              - button "Get started" [ref=e115] [cursor=pointer]:
+                - text: Get started
+                - img [ref=e118]
+            - listitem [ref=e120]:
+              - button "Releases" [ref=e121] [cursor=pointer]:
+                - text: Releases
+                - img [ref=e124]
+      - separator [ref=e126]
+      - region "Design and develop" [ref=e127]:
+        - heading "Design and develop" [level=2] [ref=e128]
+        - list [ref=e129]:
+          - list "Design and develop navigation" [ref=e130]:
+            - listitem [ref=e131]:
+              - button "Components" [expanded] [ref=e132] [cursor=pointer]:
+                - text: Components
+                - img [ref=e135]
+              - region "Components" [ref=e137]:
+                - list [ref=e138]:
+                  - listitem [ref=e139]:
+                    - link "Overview" [ref=e140] [cursor=pointer]:
+                      - /url: /components/overview
+                      - generic [ref=e142]: Overview
+                  - listitem [ref=e143]:
+                    - link "About modal" [ref=e144] [cursor=pointer]:
+                      - /url: /components/about-modal
+                      - generic [ref=e146]: About modal
+                  - listitem [ref=e147]:
+                    - link "Accordion" [ref=e148] [cursor=pointer]:
+                      - /url: /components/accordion
+                      - generic [ref=e150]: Accordion
+                  - listitem [ref=e151]:
+                    - link "Action list" [ref=e152] [cursor=pointer]:
+                      - /url: /components/action-list
+                      - generic [ref=e154]: Action list
+                  - listitem [ref=e155]:
+                    - link "Alert" [ref=e156] [cursor=pointer]:
+                      - /url: /components/alert
+                      - generic [ref=e158]: Alert
+                  - listitem [ref=e159]:
+                    - link "Avatar" [ref=e160] [cursor=pointer]:
+                      - /url: /components/avatar
+                      - generic [ref=e162]: Avatar
+                  - listitem [ref=e163]:
+                    - link "Back to top" [ref=e164] [cursor=pointer]:
+                      - /url: /components/back-to-top
+                      - generic [ref=e166]: Back to top
+                  - listitem [ref=e167]:
+                    - link "Backdrop" [ref=e168] [cursor=pointer]:
+                      - /url: /components/backdrop
+                      - generic [ref=e170]: Backdrop
+                  - listitem [ref=e171]:
+                    - link "Background image" [ref=e172] [cursor=pointer]:
+                      - /url: /components/background-image
+                      - generic [ref=e174]: Background image
+                  - listitem [ref=e175]:
+                    - link "Badge" [ref=e176] [cursor=pointer]:
+                      - /url: /components/badge
+                      - generic [ref=e178]: Badge
+                  - listitem [ref=e179]:
+                    - link "Banner" [ref=e180] [cursor=pointer]:
+                      - /url: /components/banner
+                      - generic [ref=e182]: Banner
+                  - listitem [ref=e183]:
+                    - link "Brand" [ref=e184] [cursor=pointer]:
+                      - /url: /components/brand
+                      - generic [ref=e186]: Brand
+                  - listitem [ref=e187]:
+                    - link "Breadcrumb" [ref=e188] [cursor=pointer]:
+                      - /url: /components/breadcrumb
+                      - generic [ref=e190]: Breadcrumb
+                  - listitem [ref=e191]:
+                    - link "Button" [ref=e192] [cursor=pointer]:
+                      - /url: /components/button
+                      - generic [ref=e194]: Button
+                  - listitem [ref=e195]:
+                    - link "Card" [ref=e196] [cursor=pointer]:
+                      - /url: /components/card
+                      - generic [ref=e198]: Card
+                  - listitem [ref=e199]:
+                    - button "Charts" [ref=e200] [cursor=pointer]:
+                      - text: Charts
+                      - img [ref=e203]
+                  - listitem [ref=e205]:
+                    - link "Chip Deprecated" [ref=e206] [cursor=pointer]:
+                      - /url: /components/chip
+                      - generic [ref=e207]:
+                        - generic [ref=e208]: Chip
+                        - generic [ref=e212]: Deprecated
+                  - listitem [ref=e213]:
+                    - link "Clipboard copy" [ref=e214] [cursor=pointer]:
+                      - /url: /components/clipboard-copy
+                      - generic [ref=e216]: Clipboard copy
+                  - listitem [ref=e217]:
+                    - link "Code block" [ref=e218] [cursor=pointer]:
+                      - /url: /components/code-block
+                      - generic [ref=e220]: Code block
+                  - listitem [ref=e221]:
+                    - link "Code editor" [ref=e222] [cursor=pointer]:
+                      - /url: /components/code-editor
+                      - generic [ref=e224]: Code editor
+                  - listitem [ref=e225]:
+                    - link "Compass Beta" [ref=e226] [cursor=pointer]:
+                      - /url: /components/compass
+                      - generic [ref=e227]:
+                        - generic [ref=e228]: Compass
+                        - generic [ref=e232]: Beta
+                  - listitem [ref=e233]:
+                    - link "Content" [ref=e234] [cursor=pointer]:
+                      - /url: /components/content
+                      - generic [ref=e236]: Content
+                  - listitem [ref=e237]:
+                    - link "Data list" [ref=e238] [cursor=pointer]:
+                      - /url: /components/data-list
+                      - generic [ref=e240]: Data list
+                  - listitem [ref=e241]:
+                    - button "Date and time" [ref=e242] [cursor=pointer]:
+                      - text: Date and time
+                      - img [ref=e245]
+                  - listitem [ref=e247]:
+                    - link "Description list" [ref=e248] [cursor=pointer]:
+                      - /url: /components/description-list
+                      - generic [ref=e250]: Description list
+                  - listitem [ref=e251]:
+                    - link "Divider" [ref=e252] [cursor=pointer]:
+                      - /url: /components/divider
+                      - generic [ref=e254]: Divider
+                  - listitem [ref=e255]:
+                    - link "Drag and drop" [ref=e256] [cursor=pointer]:
+                      - /url: /components/drag-and-drop
+                      - generic [ref=e258]: Drag and drop
+                  - listitem [ref=e259]:
+                    - link "Drawer" [ref=e260] [cursor=pointer]:
+                      - /url: /components/drawer
+                      - generic [ref=e262]: Drawer
+                  - listitem [ref=e263]:
+                    - link "Dual list selector" [ref=e264] [cursor=pointer]:
+                      - /url: /components/dual-list-selector
+                      - generic [ref=e266]: Dual list selector
+                  - listitem [ref=e267]:
+                    - link "Empty state" [ref=e268] [cursor=pointer]:
+                      - /url: /components/empty-state
+                      - generic [ref=e270]: Empty state
+                  - listitem [ref=e271]:
+                    - link "Expandable section" [ref=e272] [cursor=pointer]:
+                      - /url: /components/expandable-section
+                      - generic [ref=e274]: Expandable section
+                  - listitem [ref=e275]:
+                    - button "File upload" [expanded] [ref=e276] [cursor=pointer]:
+                      - text: File upload
+                      - img [ref=e279]
+                    - region "File upload" [ref=e281]:
+                      - list [ref=e282]:
+                        - listitem [ref=e283]:
+                          - link "Multiple file upload" [ref=e284] [cursor=pointer]:
+                            - /url: /components/file-upload/multiple-file-upload
+                            - generic [ref=e286]: Multiple file upload
+                        - listitem [ref=e287]:
+                          - link "Simple file upload" [ref=e288] [cursor=pointer]:
+                            - /url: /components/file-upload/simple-file-upload
+                            - generic [ref=e290]: Simple file upload
+                  - listitem [ref=e291]:
+                    - button "Forms" [ref=e292] [cursor=pointer]:
+                      - text: Forms
+                      - img [ref=e295]
+                  - listitem [ref=e297]:
+                    - link "Helper text" [ref=e298] [cursor=pointer]:
+                      - /url: /components/helper-text
+                      - generic [ref=e300]: Helper text
+                  - listitem [ref=e301]:
+                    - link "Hero Beta" [ref=e302] [cursor=pointer]:
+                      - /url: /components/hero
+                      - generic [ref=e303]:
+                        - generic [ref=e304]: Hero
+                        - generic [ref=e308]: Beta
+                  - listitem [ref=e309]:
+                    - link "Hint" [ref=e310] [cursor=pointer]:
+                      - /url: /components/hint
+                      - generic [ref=e312]: Hint
+                  - listitem [ref=e313]:
+                    - link "Icon" [ref=e314] [cursor=pointer]:
+                      - /url: /components/icon
+                      - generic [ref=e316]: Icon
+                  - listitem [ref=e317]:
+                    - link "Inline edit" [ref=e318] [cursor=pointer]:
+                      - /url: /components/inline-edit
+                      - generic [ref=e320]: Inline edit
+                  - listitem [ref=e321]:
+                    - link "Input group" [ref=e322] [cursor=pointer]:
+                      - /url: /components/input-group
+                      - generic [ref=e324]: Input group
+                  - listitem [ref=e325]:
+                    - link "Jump links" [ref=e326] [cursor=pointer]:
+                      - /url: /components/jump-links
+                      - generic [ref=e328]: Jump links
+                  - listitem [ref=e329]:
+                    - link "Label" [ref=e330] [cursor=pointer]:
+                      - /url: /components/label
+                      - generic [ref=e332]: Label
+                  - listitem [ref=e333]:
+                    - link "List" [ref=e334] [cursor=pointer]:
+                      - /url: /components/list
+                      - generic [ref=e336]: List
+                  - listitem [ref=e337]:
+                    - link "Login page" [ref=e338] [cursor=pointer]:
+                      - /url: /components/login-page
+                      - generic [ref=e340]: Login page
+                  - listitem [ref=e341]:
+                    - link "Masthead" [ref=e342] [cursor=pointer]:
+                      - /url: /components/masthead
+                      - generic [ref=e344]: Masthead
+                  - listitem [ref=e345]:
+                    - button "Menus" [ref=e346] [cursor=pointer]:
+                      - text: Menus
+                      - img [ref=e349]
+                  - listitem [ref=e351]:
+                    - link "Modal" [ref=e352] [cursor=pointer]:
+                      - /url: /components/modal
+                      - generic [ref=e354]: Modal
+                  - listitem [ref=e355]:
+                    - link "Navigation" [ref=e356] [cursor=pointer]:
+                      - /url: /components/navigation
+                      - generic [ref=e358]: Navigation
+                  - listitem [ref=e359]:
+                    - link "Notification badge" [ref=e360] [cursor=pointer]:
+                      - /url: /components/notification-badge
+                      - generic [ref=e362]: Notification badge
+                  - listitem [ref=e363]:
+                    - link "Notification drawer" [ref=e364] [cursor=pointer]:
+                      - /url: /components/notification-drawer
+                      - generic [ref=e366]: Notification drawer
+                  - listitem [ref=e367]:
+                    - link "Number input" [ref=e368] [cursor=pointer]:
+                      - /url: /components/number-input
+                      - generic [ref=e370]: Number input
+                  - listitem [ref=e371]:
+                    - link "Overflow menu" [ref=e372] [cursor=pointer]:
+                      - /url: /components/overflow-menu
+                      - generic [ref=e374]: Overflow menu
+                  - listitem [ref=e375]:
+                    - link "Page" [ref=e376] [cursor=pointer]:
+                      - /url: /components/page
+                      - generic [ref=e378]: Page
+                  - listitem [ref=e379]:
+                    - link "Pagination" [ref=e380] [cursor=pointer]:
+                      - /url: /components/pagination
+                      - generic [ref=e382]: Pagination
+                  - listitem [ref=e383]:
+                    - link "Panel" [ref=e384] [cursor=pointer]:
+                      - /url: /components/panel
+                      - generic [ref=e386]: Panel
+                  - listitem [ref=e387]:
+                    - link "Password generator Demo" [ref=e388] [cursor=pointer]:
+                      - /url: /components/password-generator
+                      - generic [ref=e389]:
+                        - generic [ref=e390]: Password generator
+                        - generic [ref=e394]: Demo
+                  - listitem [ref=e395]:
+                    - link "Password strength Demo" [ref=e396] [cursor=pointer]:
+                      - /url: /components/password-strength
+                      - generic [ref=e397]:
+                        - generic [ref=e398]: Password strength
+                        - generic [ref=e402]: Demo
+                  - listitem [ref=e403]:
+                    - link "Popover" [ref=e404] [cursor=pointer]:
+                      - /url: /components/popover
+                      - generic [ref=e406]: Popover
+                  - listitem [ref=e407]:
+                    - link "Progress" [ref=e408] [cursor=pointer]:
+                      - /url: /components/progress
+                      - generic [ref=e410]: Progress
+                  - listitem [ref=e411]:
+                    - link "Progress stepper" [ref=e412] [cursor=pointer]:
+                      - /url: /components/progress-stepper
+                      - generic [ref=e414]: Progress stepper
+                  - listitem [ref=e415]:
+                    - link "Search input" [ref=e416] [cursor=pointer]:
+                      - /url: /components/search-input
+                      - generic [ref=e418]: Search input
+                  - listitem [ref=e419]:
+                    - link "Sidebar" [ref=e420] [cursor=pointer]:
+                      - /url: /components/sidebar
+                      - generic [ref=e422]: Sidebar
+                  - listitem [ref=e423]:
+                    - link "Simple list" [ref=e424] [cursor=pointer]:
+                      - /url: /components/simple-list
+                      - generic [ref=e426]: Simple list
+                  - listitem [ref=e427]:
+                    - link "Skeleton" [ref=e428] [cursor=pointer]:
+                      - /url: /components/skeleton
+                      - generic [ref=e430]: Skeleton
+                  - listitem [ref=e431]:
+                    - link "Skip to content" [ref=e432] [cursor=pointer]:
+                      - /url: /components/skip-to-content
+                      - generic [ref=e434]: Skip to content
+                  - listitem [ref=e435]:
+                    - link "Slider" [ref=e436] [cursor=pointer]:
+                      - /url: /components/slider
+                      - generic [ref=e438]: Slider
+                  - listitem [ref=e439]:
+                    - link "Spinner" [ref=e440] [cursor=pointer]:
+                      - /url: /components/spinner
+                      - generic [ref=e442]: Spinner
+                  - listitem [ref=e443]:
+                    - link "Switch" [ref=e444] [cursor=pointer]:
+                      - /url: /components/switch
+                      - generic [ref=e446]: Switch
+                  - listitem [ref=e447]:
+                    - link "Table" [ref=e448] [cursor=pointer]:
+                      - /url: /components/table
+                      - generic [ref=e450]: Table
+                  - listitem [ref=e451]:
+                    - link "Tabs" [ref=e452] [cursor=pointer]:
+                      - /url: /components/tabs
+                      - generic [ref=e454]: Tabs
+                  - listitem [ref=e455]:
+                    - link "Text input group" [ref=e456] [cursor=pointer]:
+                      - /url: /components/text-input-group
+                      - generic [ref=e458]: Text input group
+                  - listitem [ref=e459]:
+                    - link "Tile Deprecated" [ref=e460] [cursor=pointer]:
+                      - /url: /components/tile
+                      - generic [ref=e461]:
+                        - generic [ref=e462]: Tile
+                        - generic [ref=e466]: Deprecated
+                  - listitem [ref=e467]:
+                    - link "Timestamp" [ref=e468] [cursor=pointer]:
+                      - /url: /components/timestamp
+                      - generic [ref=e470]: Timestamp
+                  - listitem [ref=e471]:
+                    - link "Title" [ref=e472] [cursor=pointer]:
+                      - /url: /components/title
+                      - generic [ref=e474]: Title
+                  - listitem [ref=e475]:
+                    - link "Toggle group" [ref=e476] [cursor=pointer]:
+                      - /url: /components/toggle-group
+                      - generic [ref=e478]: Toggle group
+                  - listitem [ref=e479]:
+                    - link "Toolbar" [ref=e480] [cursor=pointer]:
+                      - /url: /components/toolbar
+                      - generic [ref=e482]: Toolbar
+                  - listitem [ref=e483]:
+                    - link "Tooltip" [ref=e484] [cursor=pointer]:
+                      - /url: /components/tooltip
+                      - generic [ref=e486]: Tooltip
+                  - listitem [ref=e487]:
+                    - link "Tree view" [ref=e488] [cursor=pointer]:
+                      - /url: /components/tree-view
+                      - generic [ref=e490]: Tree view
+                  - listitem [ref=e491]:
+                    - link "Truncate" [ref=e492] [cursor=pointer]:
+                      - /url: /components/truncate
+                      - generic [ref=e494]: Truncate
+                  - listitem [ref=e495]:
+                    - link "Wizard" [ref=e496] [cursor=pointer]:
+                      - /url: /components/wizard
+                      - generic [ref=e498]: Wizard
+            - listitem [ref=e499]:
+              - button "Patterns" [ref=e500] [cursor=pointer]:
+                - text: Patterns
+                - img [ref=e503]
+            - listitem [ref=e505]:
+              - button "Extensions" [ref=e506] [cursor=pointer]:
+                - text: Extensions
+                - img [ref=e509]
+            - listitem [ref=e511]:
+              - button "Foundations and styles" [ref=e512] [cursor=pointer]:
+                - text: Foundations and styles
+                - img [ref=e515]
+            - listitem [ref=e517]:
+              - button "Accessibility" [ref=e518] [cursor=pointer]:
+                - text: Accessibility
+                - img [ref=e521]
+            - listitem [ref=e523]:
+              - button "AI" [ref=e524] [cursor=pointer]:
+                - text: AI
+                - img [ref=e527]
+            - listitem [ref=e529]:
+              - button "Content design" [ref=e530] [cursor=pointer]:
+                - text: Content design
+                - img [ref=e533]
+            - listitem [ref=e535]:
+              - button "Developer guides" [ref=e536] [cursor=pointer]:
+                - text: Developer guides
+                - img [ref=e539]
+      - separator [ref=e541]
+      - region "Connect" [ref=e542]:
+        - heading "Connect" [level=2] [ref=e543]
+        - list [ref=e544]:
+          - list "Connect navigation" [ref=e545]:
+            - listitem [ref=e546]:
+              - button "Get help" [ref=e547] [cursor=pointer]:
+                - text: Get help
+                - img [ref=e550]
+            - listitem [ref=e552]:
+              - button "Get involved" [ref=e553] [cursor=pointer]:
+                - text: Get involved
+                - img [ref=e556]
+    - generic [ref=e559]:
+      - main [ref=e560]:
+        - generic [ref=e561]:
+          - generic [ref=e564]:
+            - heading "Multiple file upload" [level=1] [ref=e567]
+            - paragraph [ref=e568]: A multiple file upload component allows users to select and upload multiple files to a specific location.
+          - list [ref=e572]:
+            - listitem [ref=e573]:
+              - link "React" [ref=e574] [cursor=pointer]:
+                - /url: /components/file-upload/multiple-file-upload
+            - listitem [ref=e575]:
+              - link "React demos" [ref=e576] [cursor=pointer]:
+                - /url: /components/file-upload/multiple-file-upload/react-demos
+            - listitem [ref=e577]:
+              - link "HTML" [ref=e578] [cursor=pointer]:
+                - /url: /components/file-upload/multiple-file-upload/html
+            - listitem [ref=e579]:
+              - link "CSS variables" [ref=e580] [cursor=pointer]:
+                - /url: /components/file-upload/multiple-file-upload/css-variables
+            - listitem [ref=e581]:
+              - link "Design guidelines" [ref=e582] [cursor=pointer]:
+                - /url: /components/file-upload/multiple-file-upload/design-guidelines
+          - generic [ref=e586]:
+            - navigation "Table of contents" [ref=e587]:
+              - button "Table of contents" [ref=e591] [cursor=pointer]:
+                - img [ref=e594]
+                - generic [ref=e596]: Table of contents
+            - generic [ref=e597]:
+              - paragraph [ref=e598]: "Multiple file upload is able to:"
+              - list [ref=e599]:
+                - listitem [ref=e600]: Accept one or more files via browse or drag-and-drop
+                - listitem [ref=e601]:
+                  - text: Provide their data to you using file objects via the
+                  - code [ref=e602]: onFileDrop
+                  - text: callback prop
+                - listitem [ref=e603]: Read files as dataURLs, calling provided callbacks as needed when files start/finish being read, as well as when the read succeeds or fails
+                - listitem [ref=e604]:
+                  - text: Display (in real time) the upload progress/status of each file
+                  - list [ref=e605]:
+                    - listitem [ref=e606]: Uploaded files are represented by the multiple file upload status item component, this component includes the aforementioned built-in file reading logic
+                    - listitem [ref=e607]:
+                      - text: If you prefer to supply your own file reading logic and strictly use multiple file upload status item as a display component, the
+                      - code [ref=e608]: customFileHandler
+                      - text: ","
+                      - code [ref=e609]: fileName
+                      - text: ","
+                      - code [ref=e610]: fileSize
+                      - text: ","
+                      - code [ref=e611]: progressValue
+                      - text: ", and"
+                      - code [ref=e612]: progressVariant
+                      - text: props exist to allow you to do that
+              - heading "Restricting file size and type" [level=2] [ref=e615]:
+                - button [ref=e617] [cursor=pointer]:
+                  - img [ref=e618]:
+                    - img [ref=e619]
+                - text: Restricting file size and type
+              - paragraph [ref=e621]:
+                - text: As with singular file upload, any
+                - link "props accepted by react-dropzone's Dropzone component" [ref=e622] [cursor=pointer]:
+                  - /url: https://react-dropzone.js.org/#!/Dropzone
+                - text: can be passed as a dropzoneProps object in order to customize the behavior of the Dropzone, such as restricting the type of files allowed. The following examples will only accept the files they list as accepted. Note that file type determination is not reliable across platforms (see the note on react-dropzone's docs about the accept prop), so be sure to test the behavior of your file upload restriction on all browsers and operating systems targeted by your application.
+              - 'heading "IMPORTANT: A note about security" [level=3] [ref=e625]':
+                - button [ref=e627] [cursor=pointer]:
+                  - img [ref=e628]:
+                    - img [ref=e629]
+                - text: "IMPORTANT: A note about security"
+              - paragraph [ref=e631]: Restricting file sizes and types in this way is for user convenience only, and it cannot prevent a malicious user from submitting anything to your server. As with any user input, your application should also validate, sanitize and/or reject restricted files on the server side.
+              - heading "Composable structure" [level=2] [ref=e634]:
+                - button [ref=e636] [cursor=pointer]:
+                  - img [ref=e637]:
+                    - img [ref=e638]
+                - text: Composable structure
+              - paragraph [ref=e640]: "File upload - multiple is designed in a composable manner to make customization easier. The standard sub-component relationships are arranged as follows:"
+              - code [ref=e644]: <MultipleFileUpload> <MultipleFileUploadMain /> <MultipleFileUploadStatus> <MultipleFileUploadStatusItem /> </MultipleFileUploadStatus> </MultipleFileUpload>
+              - heading "Examples" [level=2] [ref=e647]:
+                - button [ref=e649] [cursor=pointer]:
+                  - img [ref=e650]:
+                    - img [ref=e651]
+                - text: Examples
+              - generic [ref=e653]:
+                - generic [ref=e654]:
+                  - heading "Basic" [level=3] [ref=e657]:
+                    - button [ref=e659] [cursor=pointer]:
+                      - img [ref=e660]:
+                        - img [ref=e661]
+                    - text: Basic
+                  - paragraph [ref=e663]: The below example demonstrates a typical application of file upload - multiple, with a few tweaks from that typical application to enhance the convenience of the example.
+                  - paragraph [ref=e664]:
+                    - text: The "Show as horizontal" checkbox can be used to easily toggle the
+                    - code [ref=e665]: isHorizontal
+                    - text: prop, showing our available styling variations.
+                  - paragraph [ref=e666]:
+                    - text: The "Demonstrate error reporting by forcing uploads to fail" checkbox shows how our
+                    - code [ref=e667]: progressHelperText
+                    - text: prop can be used to provide status messages to users, such as when a file fails to upload. While this checkbox is checked it will cause any file uploaded to automatically fail the file reading process, and helper text will be dynamically rendered which informs the user of that error.
+                - generic [ref=e669]:
+                  - generic [ref=e670]:
+                    - generic [ref=e671]:
+                      - generic [ref=e672]:
+                        - img [ref=e674]:
+                          - img [ref=e675]
+                        - generic [ref=e677]:
+                          - text: Drag and drop files here
+                          - generic [ref=e678]: or
+                      - button "Upload" [ref=e680] [cursor=pointer]:
+                        - generic [ref=e681]: Upload
+                      - generic [ref=e682]: "Accepted file types: JPEG, Doc, PDF, PNG"
+                    - generic [ref=e684]:
+                      - button "2 of 2 files uploaded" [expanded] [ref=e686] [cursor=pointer]:
+                        - img [ref=e689]
+                        - generic [ref=e692]:
+                          - img [ref=e694]
+                          - generic [ref=e696]: 2 of 2 files uploaded
+                      - region "2 of 2 files uploaded" [ref=e697]:
+                        - list "Current uploads" [ref=e698]:
+                          - listitem [ref=e699]:
+                            - img [ref=e701]:
+                              - img [ref=e702]
+                            - generic [ref=e704]:
+                              - generic [ref=e705]: Progress value is 100%.
+                              - generic [ref=e706]:
+                                - generic [ref=e708]:
+                                  - generic [ref=e709]: file1.jpg
+                                  - generic [ref=e710]: 33B
+                                - generic [ref=e711]:
+                                  - generic [ref=e712]: 100%
+                                  - img [ref=e714]
+                                - progressbar "file1.jpg 33B" [ref=e716]
+                            - button "Remove from list" [ref=e719] [cursor=pointer]:
+                              - img [ref=e721]
+                          - listitem [ref=e723]:
+                            - img [ref=e725]:
+                              - img [ref=e726]
+                            - generic [ref=e728]:
+                              - generic [ref=e729]: Progress value is 100%.
+                              - generic [ref=e730]:
+                                - generic [ref=e732]:
+                                  - generic [ref=e733]: file2.png
+                                  - generic [ref=e734]: 12B
+                                - generic [ref=e735]:
+                                  - generic [ref=e736]: 100%
+                                  - img [ref=e738]
+                                - progressbar "file2.png 12B" [ref=e740]
+                            - button "Remove from list" [ref=e743] [cursor=pointer]:
+                              - img [ref=e745]
+                  - generic [ref=e747]:
+                    - checkbox "Show as horizontal" [ref=e748] [cursor=pointer]
+                    - generic [ref=e749] [cursor=pointer]: Show as horizontal
+                  - generic [ref=e750]:
+                    - checkbox "Demonstrate error reporting by forcing uploads to fail" [ref=e751] [cursor=pointer]
+                    - generic [ref=e752] [cursor=pointer]: Demonstrate error reporting by forcing uploads to fail
+                - generic [ref=e757]:
+                  - button "Toggle TS code in Basic example" [ref=e759] [cursor=pointer]:
+                    - generic [ref=e760]:
+                      - img [ref=e761]:
+                        - img [ref=e762]
+                      - text: TS
+                  - button "Copy Basic example code to clipboard" [ref=e765] [cursor=pointer]:
+                    - img [ref=e767]
+                  - form "Open Basic example in CodeSandbox form" [ref=e769]:
+                    - button "Open Basic example in CodeSandbox" [ref=e771] [cursor=pointer]:
+                      - img [ref=e773]
+                  - link "Open Basic example in new window" [ref=e776] [cursor=pointer]:
+                    - /url: /components/file-upload/multiple-file-upload/react/basic
+                    - img [ref=e778]:
+                      - img [ref=e779]
+              - heading "Types" [level=2] [ref=e783]:
+                - button [ref=e785] [cursor=pointer]:
+                  - img [ref=e786]:
+                    - img [ref=e787]
+                - text: Types
+              - paragraph [ref=e789]:
+                - text: Multiple file upload uses the
+                - code [ref=e790]: DropzoneOptions
+                - text: type from react-dropzone. It is comprised of additional props with their own types. For more information on using
+                - code [ref=e791]: DropzoneOptions
+                - text: visit
+                - link "react-dropzone props and methods" [ref=e792] [cursor=pointer]:
+                  - /url: https://react-dropzone.js.org/#src
+                - text: .
+              - paragraph [ref=e793]:
+                - text: Additionally, it calls the
+                - code [ref=e794]: onFileDrop
+                - text: callback with an event of type
+                - code [ref=e795]: DropEvent
+                - text: .
+                - code [ref=e796]: DropEvent
+                - text: "is a union comprised of the following types:"
+              - code [ref=e800]: React.DragEvent<HTMLElement> | React.ChangeEvent<HTMLInputElement> | DragEvent | Event
+              - generic [ref=e801]:
+                - heading "Props" [level=2] [ref=e804]:
+                  - button [ref=e806] [cursor=pointer]:
+                    - img [ref=e807]:
+                      - img [ref=e808]
+                  - text: Props
+                - heading "MultipleFileUpload" [level=3] [ref=e812]:
+                  - button [ref=e814] [cursor=pointer]:
+                    - img [ref=e815]:
+                      - img [ref=e816]
+                  - text: MultipleFileUpload
+                - grid "MultipleFileUpload" [ref=e818]:
+                  - caption [ref=e819]:
+                    - generic [ref=e820]: Acts as a container for all other MultipleFileUpload sub-components. This sub-component also provides the functionality for file uploads, and access to the uploaded files via a callback.
+                    - generic [ref=e821]: "*required"
+                  - rowgroup [ref=e822]:
+                    - row "Name Type Default Description" [ref=e823]:
+                      - columnheader "Name" [ref=e824]
+                      - columnheader "Type" [ref=e825]
+                      - columnheader "Default" [ref=e826]
+                      - columnheader "Description" [ref=e827]
+                  - rowgroup [ref=e828]:
+                    - row "children React.ReactNode Content rendered inside the multi upload field" [ref=e829]:
+                      - gridcell "children" [ref=e830]:
+                        - generic [ref=e831]: children
+                      - gridcell "React.ReactNode" [ref=e832]:
+                        - generic [ref=e833]: React.ReactNode
+                      - gridcell [ref=e834]
+                      - gridcell "Content rendered inside the multi upload field" [ref=e835]:
+                        - generic [ref=e836]: Content rendered inside the multi upload field
+                    - row "className string Class to add to outer div" [ref=e837]:
+                      - gridcell "className" [ref=e838]:
+                        - generic [ref=e839]: className
+                      - gridcell "string" [ref=e840]:
+                        - generic [ref=e841]: string
+                      - gridcell [ref=e842]
+                      - gridcell "Class to add to outer div" [ref=e843]:
+                        - generic [ref=e844]: Class to add to outer div
+                    - 'row "dropzoneProps DropzoneOptions {} Optional extra props to customize react-dropzone." [ref=e845]':
+                      - gridcell "dropzoneProps" [ref=e846]:
+                        - generic [ref=e847]: dropzoneProps
+                      - gridcell "DropzoneOptions" [ref=e848]:
+                        - generic [ref=e849]: DropzoneOptions
+                      - 'gridcell "{}" [ref=e850]':
+                        - generic [ref=e851]: "{}"
+                      - gridcell "Optional extra props to customize react-dropzone." [ref=e852]:
+                        - generic [ref=e853]: Optional extra props to customize react-dropzone.
+                    - row "isHorizontal boolean Flag setting the component to horizontal styling mode" [ref=e854]:
+                      - gridcell "isHorizontal" [ref=e855]:
+                        - generic [ref=e856]: isHorizontal
+                      - gridcell "boolean" [ref=e857]:
+                        - generic [ref=e858]: boolean
+                      - gridcell [ref=e859]
+                      - gridcell "Flag setting the component to horizontal styling mode" [ref=e860]:
+                        - generic [ref=e861]: Flag setting the component to horizontal styling mode
+                    - 'row "onFileDrop (event: DropEvent, data: File[]) => void () => {} When files are dropped or uploaded this callback will be called with all accepted files" [ref=e862]':
+                      - gridcell "onFileDrop" [ref=e863]:
+                        - generic [ref=e864]: onFileDrop
+                      - 'gridcell "(event: DropEvent, data: File[]) => void" [ref=e865]':
+                        - generic [ref=e866]: "(event: DropEvent, data: File[]) => void"
+                      - 'gridcell "() => {}" [ref=e867]':
+                        - generic [ref=e868]: "() => {}"
+                      - gridcell "When files are dropped or uploaded this callback will be called with all accepted files" [ref=e869]:
+                        - generic [ref=e870]: When files are dropped or uploaded this callback will be called with all accepted files
+                - heading "MultipleFileUploadMain" [level=3] [ref=e873]:
+                  - button [ref=e875] [cursor=pointer]:
+                    - img [ref=e876]:
+                      - img [ref=e877]
+                  - text: MultipleFileUploadMain
+                - grid "MultipleFileUploadMain" [ref=e879]:
+                  - caption [ref=e880]:
+                    - generic [ref=e881]: Creates the visual upload interface, including the area to drag and drop files, an optional upload button, and descriptive instructions.
+                    - generic [ref=e882]: "*required"
+                  - rowgroup [ref=e883]:
+                    - row "Name Type Default Description" [ref=e884]:
+                      - columnheader "Name" [ref=e885]
+                      - columnheader "Type" [ref=e886]
+                      - columnheader "Default" [ref=e887]
+                      - columnheader "Description" [ref=e888]
+                  - rowgroup [ref=e889]:
+                    - row "browseButtonText string 'Upload' Visible text label for the upload button" [ref=e890]:
+                      - gridcell "browseButtonText" [ref=e891]:
+                        - generic [ref=e892]: browseButtonText
+                      - gridcell "string" [ref=e893]:
+                        - generic [ref=e894]: string
+                      - gridcell "'Upload'" [ref=e895]:
+                        - generic [ref=e896]: "'Upload'"
+                      - gridcell "Visible text label for the upload button" [ref=e897]:
+                        - generic [ref=e898]: Visible text label for the upload button
+                    - row "className string Class to add to outer div" [ref=e899]:
+                      - gridcell "className" [ref=e900]:
+                        - generic [ref=e901]: className
+                      - gridcell "string" [ref=e902]:
+                        - generic [ref=e903]: string
+                      - gridcell [ref=e904]
+                      - gridcell "Class to add to outer div" [ref=e905]:
+                        - generic [ref=e906]: Class to add to outer div
+                    - row "infoText React.ReactNode Content rendered inside the info div" [ref=e907]:
+                      - gridcell "infoText" [ref=e908]:
+                        - generic [ref=e909]: infoText
+                      - gridcell "React.ReactNode" [ref=e910]:
+                        - generic [ref=e911]: React.ReactNode
+                      - gridcell [ref=e912]
+                      - gridcell "Content rendered inside the info div" [ref=e913]:
+                        - generic [ref=e914]: Content rendered inside the info div
+                    - row "isUploadButtonHidden boolean Flag to prevent the upload button from being rendered" [ref=e915]:
+                      - gridcell "isUploadButtonHidden" [ref=e916]:
+                        - generic [ref=e917]: isUploadButtonHidden
+                      - gridcell "boolean" [ref=e918]:
+                        - generic [ref=e919]: boolean
+                      - gridcell [ref=e920]
+                      - gridcell "Flag to prevent the upload button from being rendered" [ref=e921]:
+                        - generic [ref=e922]: Flag to prevent the upload button from being rendered
+                    - row "titleIcon React.ReactNode Content rendered inside the title icon div" [ref=e923]:
+                      - gridcell "titleIcon" [ref=e924]:
+                        - generic [ref=e925]: titleIcon
+                      - gridcell "React.ReactNode" [ref=e926]:
+                        - generic [ref=e927]: React.ReactNode
+                      - gridcell [ref=e928]
+                      - gridcell "Content rendered inside the title icon div" [ref=e929]:
+                        - generic [ref=e930]: Content rendered inside the title icon div
+                    - row "titleText React.ReactNode Content rendered inside the title text div" [ref=e931]:
+                      - gridcell "titleText" [ref=e932]:
+                        - generic [ref=e933]: titleText
+                      - gridcell "React.ReactNode" [ref=e934]:
+                        - generic [ref=e935]: React.ReactNode
+                      - gridcell [ref=e936]
+                      - gridcell "Content rendered inside the title text div" [ref=e937]:
+                        - generic [ref=e938]: Content rendered inside the title text div
+                    - row "titleTextSeparator React.ReactNode Content rendered inside the title text separator div" [ref=e939]:
+                      - gridcell "titleTextSeparator" [ref=e940]:
+                        - generic [ref=e941]: titleTextSeparator
+                      - gridcell "React.ReactNode" [ref=e942]:
+                        - generic [ref=e943]: React.ReactNode
+                      - gridcell [ref=e944]
+                      - gridcell "Content rendered inside the title text separator div" [ref=e945]:
+                        - generic [ref=e946]: Content rendered inside the title text separator div
+                - heading "MultipleFileUploadStatus" [level=3] [ref=e949]:
+                  - button [ref=e951] [cursor=pointer]:
+                    - img [ref=e952]:
+                      - img [ref=e953]
+                  - text: MultipleFileUploadStatus
+                - grid "MultipleFileUploadStatus" [ref=e955]:
+                  - caption [ref=e956]:
+                    - generic [ref=e957]: Acts as an expandable container for all uploaded file statuses. An optional text and/or icon can also be passed into this sub-component. This sub-component can be conditionally rendered when at least 1 file has been attempted to be uploaded.
+                    - generic [ref=e958]: "*required"
+                  - rowgroup [ref=e959]:
+                    - row "Name Type Default Description" [ref=e960]:
+                      - columnheader "Name" [ref=e961]
+                      - columnheader "Type" [ref=e962]
+                      - columnheader "Default" [ref=e963]
+                      - columnheader "Description" [ref=e964]
+                  - rowgroup [ref=e965]:
+                    - row "aria-label string Adds an accessible label to the list of status items." [ref=e966]:
+                      - gridcell "aria-label" [ref=e967]:
+                        - generic [ref=e968]: aria-label
+                      - gridcell "string" [ref=e969]:
+                        - generic [ref=e970]: string
+                      - gridcell [ref=e971]
+                      - gridcell "Adds an accessible label to the list of status items." [ref=e972]:
+                        - generic [ref=e973]: Adds an accessible label to the list of status items.
+                    - row "children React.ReactNode Content rendered inside multi file upload status list" [ref=e974]:
+                      - gridcell "children" [ref=e975]:
+                        - generic [ref=e976]: children
+                      - gridcell "React.ReactNode" [ref=e977]:
+                        - generic [ref=e978]: React.ReactNode
+                      - gridcell [ref=e979]
+                      - gridcell "Content rendered inside multi file upload status list" [ref=e980]:
+                        - generic [ref=e981]: Content rendered inside multi file upload status list
+                    - row "className string Class to add to outer div" [ref=e982]:
+                      - gridcell "className" [ref=e983]:
+                        - generic [ref=e984]: className
+                      - gridcell "string" [ref=e985]:
+                        - generic [ref=e986]: string
+                      - gridcell [ref=e987]
+                      - gridcell "Class to add to outer div" [ref=e988]:
+                        - generic [ref=e989]: Class to add to outer div
+                    - row "statusToggleIcon 'danger' | 'success' | 'inProgress' | React.ReactNode Icon to show in the status toggle" [ref=e990]:
+                      - gridcell "statusToggleIcon" [ref=e991]:
+                        - generic [ref=e992]: statusToggleIcon
+                      - gridcell "'danger' | 'success' | 'inProgress' | React.ReactNode" [ref=e993]:
+                        - generic [ref=e994]: "'danger' | 'success' | 'inProgress' | React.ReactNode"
+                      - gridcell [ref=e995]
+                      - gridcell "Icon to show in the status toggle" [ref=e996]:
+                        - generic [ref=e997]: Icon to show in the status toggle
+                    - row "statusToggleText string String to show in the status toggle" [ref=e998]:
+                      - gridcell "statusToggleText" [ref=e999]:
+                        - generic [ref=e1000]: statusToggleText
+                      - gridcell "string" [ref=e1001]:
+                        - generic [ref=e1002]: string
+                      - gridcell [ref=e1003]
+                      - gridcell "String to show in the status toggle" [ref=e1004]:
+                        - generic [ref=e1005]: String to show in the status toggle
+                - heading "MultipleFileUploadStatusItem" [level=3] [ref=e1008]:
+                  - button [ref=e1010] [cursor=pointer]:
+                    - img [ref=e1011]:
+                      - img [ref=e1012]
+                  - text: MultipleFileUploadStatusItem
+                - grid "MultipleFileUploadStatusItem" [ref=e1014]:
+                  - caption [ref=e1015]:
+                    - generic [ref=e1016]: Automatically reads an uploaded file to render a visual representation of it, including its name, size, and read status. This sub-component also allows custom reading of files via various callbacks which will override the automatic reading behavior.
+                    - generic [ref=e1017]: "*required"
+                  - rowgroup [ref=e1018]:
+                    - row "Name Type Default Description" [ref=e1019]:
+                      - columnheader "Name" [ref=e1020]
+                      - columnheader "Type" [ref=e1021]
+                      - columnheader "Default" [ref=e1022]
+                      - columnheader "Description" [ref=e1023]
+                  - rowgroup [ref=e1024]:
+                    - row "buttonAriaLabel string 'Remove from list' Adds accessibility text to the status item deletion button" [ref=e1025]:
+                      - gridcell "buttonAriaLabel" [ref=e1026]:
+                        - generic [ref=e1027]: buttonAriaLabel
+                      - gridcell "string" [ref=e1028]:
+                        - generic [ref=e1029]: string
+                      - gridcell "'Remove from list'" [ref=e1030]:
+                        - generic [ref=e1031]: "'Remove from list'"
+                      - gridcell "Adds accessibility text to the status item deletion button" [ref=e1032]:
+                        - generic [ref=e1033]: Adds accessibility text to the status item deletion button
+                    - row "className string Class to add to outer div" [ref=e1034]:
+                      - gridcell "className" [ref=e1035]:
+                        - generic [ref=e1036]: className
+                      - gridcell "string" [ref=e1037]:
+                        - generic [ref=e1038]: string
+                      - gridcell [ref=e1039]
+                      - gridcell "Class to add to outer div" [ref=e1040]:
+                        - generic [ref=e1041]: Class to add to outer div
+                    - 'row "customFileHandler (file: File) => void A callback to process file reading in a custom way" [ref=e1042]':
+                      - gridcell "customFileHandler" [ref=e1043]:
+                        - generic [ref=e1044]: customFileHandler
+                      - 'gridcell "(file: File) => void" [ref=e1045]':
+                        - generic [ref=e1046]: "(file: File) => void"
+                      - gridcell [ref=e1047]
+                      - gridcell "A callback to process file reading in a custom way" [ref=e1048]:
+                        - generic [ref=e1049]: A callback to process file reading in a custom way
+                    - row "file File The file object being represented by the status item" [ref=e1050]:
+                      - gridcell "file" [ref=e1051]:
+                        - generic [ref=e1052]: file
+                      - gridcell "File" [ref=e1053]:
+                        - generic [ref=e1054]: File
+                      - gridcell [ref=e1055]
+                      - gridcell "The file object being represented by the status item" [ref=e1056]:
+                        - generic [ref=e1057]: The file object being represented by the status item
+                    - row "fileIcon React.ReactNode A custom icon to show in place of the generic file icon" [ref=e1058]:
+                      - gridcell "fileIcon" [ref=e1059]:
+                        - generic [ref=e1060]: fileIcon
+                      - gridcell "React.ReactNode" [ref=e1061]:
+                        - generic [ref=e1062]: React.ReactNode
+                      - gridcell [ref=e1063]
+                      - gridcell "A custom icon to show in place of the generic file icon" [ref=e1064]:
+                        - generic [ref=e1065]: A custom icon to show in place of the generic file icon
+                    - row "fileName string A custom name to display for the file rather than using built in functionality to auto-fill it" [ref=e1066]:
+                      - gridcell "fileName" [ref=e1067]:
+                        - generic [ref=e1068]: fileName
+                      - gridcell "string" [ref=e1069]:
+                        - generic [ref=e1070]: string
+                      - gridcell [ref=e1071]
+                      - gridcell "A custom name to display for the file rather than using built in functionality to auto-fill it" [ref=e1072]:
+                        - generic [ref=e1073]: A custom name to display for the file rather than using built in functionality to auto-fill it
+                    - row "fileSize number A custom file size to display for the file rather than using built in functionality to auto-fill it" [ref=e1074]:
+                      - gridcell "fileSize" [ref=e1075]:
+                        - generic [ref=e1076]: fileSize
+                      - gridcell "number" [ref=e1077]:
+                        - generic [ref=e1078]: number
+                      - gridcell [ref=e1079]
+                      - gridcell "A custom file size to display for the file rather than using built in functionality to auto-fill it" [ref=e1080]:
+                        - generic [ref=e1081]: A custom file size to display for the file rather than using built in functionality to auto-fill it
+                    - 'row "onClearClick React.MouseEventHandler<HTMLButtonElement> () => {} Clear button was clicked" [ref=e1082]':
+                      - gridcell "onClearClick" [ref=e1083]:
+                        - generic [ref=e1084]: onClearClick
+                      - gridcell "React.MouseEventHandler<HTMLButtonElement>" [ref=e1085]:
+                        - generic [ref=e1086]: React.MouseEventHandler<HTMLButtonElement>
+                      - 'gridcell "() => {}" [ref=e1087]':
+                        - generic [ref=e1088]: "() => {}"
+                      - gridcell "Clear button was clicked" [ref=e1089]:
+                        - generic [ref=e1090]: Clear button was clicked
+                    - 'row "onReadFail (error: DOMException, onReadFail: File) => void () => {} A callback for when the FileReader API fails" [ref=e1091]':
+                      - gridcell "onReadFail" [ref=e1092]:
+                        - generic [ref=e1093]: onReadFail
+                      - 'gridcell "(error: DOMException, onReadFail: File) => void" [ref=e1094]':
+                        - generic [ref=e1095]: "(error: DOMException, onReadFail: File) => void"
+                      - 'gridcell "() => {}" [ref=e1096]':
+                        - generic [ref=e1097]: "() => {}"
+                      - gridcell "A callback for when the FileReader API fails" [ref=e1098]:
+                        - generic [ref=e1099]: A callback for when the FileReader API fails
+                    - 'row "onReadFinished (fileHandle: File) => void () => {} A callback for when a selected file finishes loading" [ref=e1100]':
+                      - gridcell "onReadFinished" [ref=e1101]:
+                        - generic [ref=e1102]: onReadFinished
+                      - 'gridcell "(fileHandle: File) => void" [ref=e1103]':
+                        - generic [ref=e1104]: "(fileHandle: File) => void"
+                      - 'gridcell "() => {}" [ref=e1105]':
+                        - generic [ref=e1106]: "() => {}"
+                      - gridcell "A callback for when a selected file finishes loading" [ref=e1107]:
+                        - generic [ref=e1108]: A callback for when a selected file finishes loading
+                    - 'row "onReadStarted (fileHandle: File) => void () => {} A callback for when a selected file starts loading" [ref=e1109]':
+                      - gridcell "onReadStarted" [ref=e1110]:
+                        - generic [ref=e1111]: onReadStarted
+                      - 'gridcell "(fileHandle: File) => void" [ref=e1112]':
+                        - generic [ref=e1113]: "(fileHandle: File) => void"
+                      - 'gridcell "() => {}" [ref=e1114]':
+                        - generic [ref=e1115]: "() => {}"
+                      - gridcell "A callback for when a selected file starts loading" [ref=e1116]:
+                        - generic [ref=e1117]: A callback for when a selected file starts loading
+                    - 'row "onReadSuccess (data: string, file: File) => void () => {} A callback for when the FileReader successfully reads the file" [ref=e1118]':
+                      - gridcell "onReadSuccess" [ref=e1119]:
+                        - generic [ref=e1120]: onReadSuccess
+                      - 'gridcell "(data: string, file: File) => void" [ref=e1121]':
+                        - generic [ref=e1122]: "(data: string, file: File) => void"
+                      - 'gridcell "() => {}" [ref=e1123]':
+                        - generic [ref=e1124]: "() => {}"
+                      - gridcell "A callback for when the FileReader successfully reads the file" [ref=e1125]:
+                        - generic [ref=e1126]: A callback for when the FileReader successfully reads the file
+                    - row "progressAriaDescribedBy string Adds an accessible description to the ProgressBar via space separated list of ids. Required when helperText is passed in." [ref=e1127]:
+                      - gridcell "progressAriaDescribedBy" [ref=e1128]:
+                        - generic [ref=e1129]: progressAriaDescribedBy
+                      - gridcell "string" [ref=e1130]:
+                        - generic [ref=e1131]: string
+                      - gridcell [ref=e1132]
+                      - gridcell "Adds an accessible description to the ProgressBar via space separated list of ids. Required when helperText is passed in." [ref=e1133]:
+                        - generic [ref=e1134]: Adds an accessible description to the ProgressBar via space separated list of ids. Required when helperText is passed in.
+                    - row "progressAriaLabel string Adds accessible text to the progress bar. Required when title not used and there is not any label associated with the progress bar" [ref=e1135]:
+                      - gridcell "progressAriaLabel" [ref=e1136]:
+                        - generic [ref=e1137]: progressAriaLabel
+                      - gridcell "string" [ref=e1138]:
+                        - generic [ref=e1139]: string
+                      - gridcell [ref=e1140]
+                      - gridcell "Adds accessible text to the progress bar. Required when title not used and there is not any label associated with the progress bar" [ref=e1141]:
+                        - generic [ref=e1142]: Adds accessible text to the progress bar. Required when title not used and there is not any label associated with the progress bar
+                    - row "progressAriaLabelledBy string Associates the progress bar with it's label for accessibility purposes. Required when title not used" [ref=e1143]:
+                      - gridcell "progressAriaLabelledBy" [ref=e1144]:
+                        - generic [ref=e1145]: progressAriaLabelledBy
+                      - gridcell "string" [ref=e1146]:
+                        - generic [ref=e1147]: string
+                      - gridcell [ref=e1148]
+                      - gridcell "Associates the progress bar with it's label for accessibility purposes. Required when title not used" [ref=e1149]:
+                        - generic [ref=e1150]: Associates the progress bar with it's label for accessibility purposes. Required when title not used
+                    - 'row "progressAriaLiveMessage string | ((loadPercentage: number) => string) Modifies the text announced by assistive technologies when the progress bar updates." [ref=e1151]':
+                      - gridcell "progressAriaLiveMessage" [ref=e1152]:
+                        - generic [ref=e1153]: progressAriaLiveMessage
+                      - 'gridcell "string | ((loadPercentage: number) => string)" [ref=e1154]':
+                        - generic [ref=e1155]: "string | ((loadPercentage: number) => string)"
+                      - gridcell [ref=e1156]
+                      - gridcell "Modifies the text announced by assistive technologies when the progress bar updates." [ref=e1157]:
+                        - generic [ref=e1158]: Modifies the text announced by assistive technologies when the progress bar updates.
+                    - row "progressHelperText React.ReactNode Additional content related to the status item." [ref=e1159]:
+                      - gridcell "progressHelperText" [ref=e1160]:
+                        - generic [ref=e1161]: progressHelperText
+                      - gridcell "React.ReactNode" [ref=e1162]:
+                        - generic [ref=e1163]: React.ReactNode
+                      - gridcell [ref=e1164]
+                      - gridcell "Additional content related to the status item." [ref=e1165]:
+                        - generic [ref=e1166]: Additional content related to the status item.
+                    - row "progressId string Unique identifier for progress. Generated if not specified." [ref=e1167]:
+                      - gridcell "progressId" [ref=e1168]:
+                        - generic [ref=e1169]: progressId
+                      - gridcell "string" [ref=e1170]:
+                        - generic [ref=e1171]: string
+                      - gridcell [ref=e1172]
+                      - gridcell "Unique identifier for progress. Generated if not specified." [ref=e1173]:
+                        - generic [ref=e1174]: Unique identifier for progress. Generated if not specified.
+                    - row "progressValue number A custom value to display for the progress component rather than using built in functionality to auto-fill it" [ref=e1175]:
+                      - gridcell "progressValue" [ref=e1176]:
+                        - generic [ref=e1177]: progressValue
+                      - gridcell "number" [ref=e1178]:
+                        - generic [ref=e1179]: number
+                      - gridcell [ref=e1180]
+                      - gridcell "A custom value to display for the progress component rather than using built in functionality to auto-fill it" [ref=e1181]:
+                        - generic [ref=e1182]: A custom value to display for the progress component rather than using built in functionality to auto-fill it
+                    - row "progressVariant 'danger' | 'success' | 'warning' A custom variant to apply to the progress component rather than using built in functionality to auto-fill it" [ref=e1183]:
+                      - gridcell "progressVariant" [ref=e1184]:
+                        - generic [ref=e1185]: progressVariant
+                      - gridcell "'danger' | 'success' | 'warning'" [ref=e1186]:
+                        - generic [ref=e1187]: "'danger' | 'success' | 'warning'"
+                      - gridcell [ref=e1188]
+                      - gridcell "A custom variant to apply to the progress component rather than using built in functionality to auto-fill it" [ref=e1189]:
+                        - generic [ref=e1190]: A custom variant to apply to the progress component rather than using built in functionality to auto-fill it
+              - link "Edit this page on GitHub" [ref=e1192] [cursor=pointer]:
+                - /url: https://github.com/patternfly/patternfly-react/blob/main/packages/react-core/src/components/MultipleFileUpload/examples/MultipleFileUpload.md
+          - button "Back to top" [ref=e1194] [cursor=pointer]:
+            - generic [ref=e1195]: Back to top
+            - img [ref=e1197]
+          - button "Give feedback" [ref=e1200] [cursor=pointer]:
+            - generic [ref=e1201]: Give feedback
+      - contentinfo [ref=e1202]:
+        - generic [ref=e1204]:
+          - generic [ref=e1206]:
+            - generic [ref=e1207]:
+              - paragraph [ref=e1208]: Contribute
+              - navigation "Contribute" [ref=e1209]:
+                - list [ref=e1210]:
+                  - listitem [ref=e1211]:
+                    - link "Our code of conduct for contributions" [ref=e1213] [cursor=pointer]:
+                      - /url: https://github.com/patternfly/patternfly/blob/main/CODE_OF_CONDUCT.md
+                      - text: Code of conduct
+            - generic [ref=e1214]:
+              - paragraph [ref=e1215]: Community
+              - navigation "Stay in touch" [ref=e1216]:
+                - list [ref=e1217]:
+                  - listitem [ref=e1218]:
+                    - link "Join the PatternFly Slack" [ref=e1220] [cursor=pointer]:
+                      - /url: //join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ
+                      - text: Slack
+                  - listitem [ref=e1221]:
+                    - link "Read the PatternFly blog" [ref=e1223] [cursor=pointer]:
+                      - /url: //medium.com/patternfly
+                      - text: Medium
+                  - listitem [ref=e1224]:
+                    - link "Join the PatternFly mailing list" [ref=e1226] [cursor=pointer]:
+                      - /url: https://www.redhat.com/dynamic-form/instance/934b1674-bc8a-4a13-8c9d-d19abcceb263
+                      - text: Mailing list
+                  - listitem [ref=e1227]:
+                    - link "Join PatternFly meetings" [ref=e1229] [cursor=pointer]:
+                      - /url: https://calendar.google.com/calendar/embed?src=patternflyteam%40gmail.com&ctz=America%2FNew_York
+                      - text: Calendar
+                  - listitem [ref=e1230]:
+                    - link "Visit the PatternFly discussion forum" [ref=e1232] [cursor=pointer]:
+                      - /url: //github.com/orgs/patternfly/discussions
+                      - text: GitHub Discussions
+          - generic [ref=e1234]:
+            - generic [ref=e1235]:
+              - link "PatternFly" [ref=e1236] [cursor=pointer]:
+                - /url: /
+                - img "PatternFly" [ref=e1237]
+              - paragraph [ref=e1254]: PatternFly is an open source design system built to drive consistency and unify teams. From documentation and components to code examples and tutorials, PatternFly is a place where design and development can thrive. We’re on a mission to help teams build consistent, accessible, and scalable enterprise product experiences—the open source way.
+            - generic [ref=e1255]:
+              - link "Link to PatternFly GitHub page" [ref=e1256] [cursor=pointer]:
+                - /url: //github.com/patternfly
+                - img [ref=e1257]
+              - link "Link to PatternFly X page" [ref=e1259] [cursor=pointer]:
+                - /url: //x.com/patternfly
+                - img [ref=e1260]
+      - generic [ref=e1264]:
+        - link "Red Hat" [ref=e1266] [cursor=pointer]:
+          - /url: //www.redhat.com
+          - img "Red Hat" [ref=e1267]
+        - generic [ref=e1269]: Copyright © 2014-2026 Red Hat, Inc.
+        - generic [ref=e1270]:
+          - link "Privacy statement" [ref=e1271] [cursor=pointer]:
+            - /url: //www.redhat.com/en/about/privacy-policy
+          - link "Terms of use" [ref=e1272] [cursor=pointer]:
+            - /url: //www.redhat.com/en/about/terms-use
+          - link "All policies and guidelines" [ref=e1273] [cursor=pointer]:
+            - /url: //www.redhat.com/en/about/all-policies-guidelines
+```
+
+# Test source
+
+```ts
+  1  | import{test, expect, Locator} from '@playwright/test'
+  2  | import path from 'path';
+  3  | 
+  4  | const URL = 'https://www.patternfly.org/components/file-upload/multiple-file-upload/';
+  5  | 
+  6  | test.describe('Grouping testcase', ()=>{    
+  7  | 
+  8  |     test.beforeEach(async ({ page }) => {
+  9  |         
+  10 |         await page.goto(URL);
+  11 |     });
+  12 | 
+  13 |     test('Single File Upload', async({page})=>{
+  14 | 
+  15 |         await page.locator("div.pf-v6-c-multiple-file-upload input").setInputFiles(
+  16 |             [{
+  17 |                 name: 'file1.jpg',
+  18 |                 mimeType: 'image/jpeg',
+  19 |                 buffer: Buffer.from('image from thetestingacademy code')
+  20 |             },
+  21 |             {
+  22 |                 name: 'file2.png',
+  23 |                 mimeType: 'image/jpeg',
+  24 |                 buffer: Buffer.from('this is test')
+  25 |             }
+  26 | 
+  27 |             ]);
+  28 | 
+  29 |         
+> 30 |         await page.locator(".pf-v6-c-button pf-m-secondary").click();
+     |                                                              ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  31 | 
+  32 |          await page.waitForTimeout(15000);
+  33 |         await page.pause();
+  34 | 
+  35 |                  
+  36 |                
+  37 |        
+  38 |     });
+  39 | 
+  40 |     
+  41 | 
+  42 |     
+  43 | });
+```
