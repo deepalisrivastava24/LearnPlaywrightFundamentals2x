@@ -1,0 +1,410 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: 19_Data_Driven_Testing\08_JSON_DDT.spec.ts >> DDT JSON >> Login with : duplicate email
+- Location: tests\19_Data_Driven_Testing\08_JSON_DDT.spec.ts:17:13
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Email already exists')
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 5000ms
+  - waiting for getByText('Email already exists')
+
+```
+
+```yaml
+- 'region "Announcement: AI Tester Blueprint new batch"':
+  - text: LIVE AI Tester Blueprint New batch | 23 May 2026 · 11:00 AM IST | ₹35,000₹9,999
+  - emphasis: 33% OFF
+  - text: Code
+  - code: AITESTER
+  - link "Join":
+    - /url: https://bit.ly/aitester2026
+  - link "Chat on WhatsApp":
+    - /url: https://sdet.live/WhatsApp
+    - text: ☎
+  - button "Dismiss banner": ×
+- complementary "Practice navigation":
+  - link "T The Testing Academy":
+    - /url: ./index.html
+    - text: T
+    - strong: The Testing Academy
+  - button "Toggle sidebar"
+  - searchbox /
+  - text: /
+  - navigation:
+    - button "JavaScript" [expanded]
+    - list:
+      - listitem:
+        - link "Overview":
+          - /url: ./learn/javascript/index.html
+      - listitem:
+        - link "Foundations (ch 1-4)":
+          - /url: ./learn/javascript/foundations.html
+      - listitem:
+        - link "Control flow (ch 5-7) soon":
+          - /url: ./learn/javascript/control-flow.html
+      - listitem:
+        - link "Data structures (ch 8-12) soon":
+          - /url: ./learn/javascript/data-structures.html
+      - listitem:
+        - link "Functions (ch 9 + 13) soon":
+          - /url: ./learn/javascript/functions.html
+      - listitem:
+        - link "Async (ch 14-15) soon":
+          - /url: ./learn/javascript/async.html
+      - listitem:
+        - link "OOP (ch 16-17) soon":
+          - /url: ./learn/javascript/oop.html
+      - listitem:
+        - link "JS notes":
+          - /url: ./notes.html
+    - button "TypeScript" [expanded]
+    - list:
+      - listitem:
+        - link "Overview":
+          - /url: ./learn/typescript/index.html
+      - listitem:
+        - link "Setup + basics soon":
+          - /url: ./learn/typescript/setup.html
+      - listitem:
+        - link "Types deep dive soon":
+          - /url: ./learn/typescript/types.html
+      - listitem:
+        - link "Interfaces soon":
+          - /url: ./learn/typescript/interfaces.html
+      - listitem:
+        - link "Enums soon":
+          - /url: ./learn/typescript/enums.html
+      - listitem:
+        - link "Generics soon":
+          - /url: ./learn/typescript/generics.html
+      - listitem:
+        - link "Access modifiers + classes soon":
+          - /url: ./learn/typescript/classes.html
+    - button "Playwright fundamentals" [expanded]
+    - list:
+      - listitem:
+        - link "Curriculum hub":
+          - /url: ./learn/playwright-fundamentals/index.html
+      - listitem:
+        - link "Multiple Element Filter":
+          - /url: ./multiple_element_filter.html
+      - listitem:
+        - link "Web Table Directory":
+          - /url: ./webtable.html
+      - listitem:
+        - link "QA Profile Form":
+          - /url: ./tables/practice.html
+      - listitem:
+        - link "Companies Table":
+          - /url: ./tables/webtable.html
+      - listitem:
+        - link "Tall Buildings Table":
+          - /url: ./tables/webtable1.html
+      - listitem:
+        - link "Custom Dropdowns":
+          - /url: ./tables/dropdowns.html
+      - listitem:
+        - link "Select Box Variants":
+          - /url: ./tables/select-boxes.html
+      - listitem:
+        - link "Sortable Admin Table":
+          - /url: ./tables/sortable.html
+      - listitem:
+        - link "Cricket Scorecard":
+          - /url: ./tables/scorecard.html
+      - listitem:
+        - link "Frames overview":
+          - /url: ./frames/index.html
+      - listitem:
+        - link "Multi-frame frameset":
+          - /url: ./frames/multi-frames.html
+      - listitem:
+        - link "Nested iframes":
+          - /url: ./frames/nested-iframes.html
+      - listitem:
+        - link "Courses frameset":
+          - /url: ./frames/courses-frameset.html
+      - listitem:
+        - link "SVG locators":
+          - /url: ./widgets/svg.html
+      - listitem:
+        - link "Shadow DOM":
+          - /url: ./widgets/shadow-dom.html
+      - listitem:
+        - link "Calendar / date picker":
+          - /url: ./widgets/calendar.html
+      - listitem:
+        - link "Drag and drop":
+          - /url: ./widgets/dnd.html
+      - listitem:
+        - link "Toasts and notifications":
+          - /url: ./widgets/toasts.html
+      - listitem:
+        - link "Native dialogs":
+          - /url: ./widgets/dialogs.html
+      - listitem:
+        - link "Hover menus":
+          - /url: ./widgets/hover-menu.html
+      - listitem:
+        - link "Right-click menu":
+          - /url: ./widgets/context-menu.html
+      - listitem:
+        - link "Keyboard navigation":
+          - /url: ./widgets/keyboard-form.html
+      - listitem:
+        - link "Windows and Tabs":
+          - /url: ./widgets/windows-tabs.html
+      - listitem:
+        - link "Upload and Download":
+          - /url: ./widgets/upload-download.html
+      - listitem:
+        - link "Scroll":
+          - /url: ./widgets/scroll.html
+      - listitem:
+        - link "Assertions (expect)":
+          - /url: ./widgets/expect.html
+      - listitem:
+        - link "Test modifiers, hooks, data":
+          - /url: ./widgets/test-modifiers.html
+      - listitem:
+        - link "Data-driven + POM":
+          - /url: ./widgets/data-driven.html
+      - listitem:
+        - link "Network interception":
+          - /url: ./network/intercept.html
+      - listitem:
+        - link "TTACart demo":
+          - /url: ./ttacart/index.html
+      - listitem:
+        - link "TTAStays booking":
+          - /url: ./booking/index.html
+      - listitem:
+        - link "Advance Playwright framework":
+          - /url: ./advance-framework.html
+    - button "Playwright API Testing" [expanded]
+    - list:
+      - listitem:
+        - link "Overview":
+          - /url: ./learn/playwright-api/index.html
+      - listitem:
+        - link "CRUD basics":
+          - /url: ./learn/playwright-api/crud.html
+      - listitem:
+        - link "Auth + Schema":
+          - /url: ./learn/playwright-api/auth-schema.html
+      - listitem:
+        - link "Network monitoring":
+          - /url: ./learn/playwright-api/network.html
+    - button "Playwright BDD (Cucumber)" [expanded]
+    - list:
+      - listitem:
+        - link "Overview":
+          - /url: ./learn/playwright-cucumber/index.html
+      - listitem:
+        - link "Setup + first run":
+          - /url: ./learn/playwright-cucumber/setup.html
+      - listitem:
+        - link "Data-driven":
+          - /url: ./learn/playwright-cucumber/data-driven.html
+      - listitem:
+        - link "CI + tags + env":
+          - /url: ./learn/playwright-cucumber/ci-tags-env.html
+    - button "Playwright DevOps" [expanded]
+    - list:
+      - listitem:
+        - link "NPM Registry (JFrog/Nexus)":
+          - /url: ./learn/playwright-registry/index.html
+      - listitem:
+        - link "Docker setup":
+          - /url: ./learn/playwright-docker/index.html
+      - listitem:
+        - link "Sharding multi-container":
+          - /url: ./learn/playwright-shard/index.html
+    - button "Playwright AI" [expanded]
+    - list:
+      - listitem:
+        - link "Curriculum hub":
+          - /url: ./learn/playwright-ai-agents/index.html
+      - listitem:
+        - link "Framework + AI (V2)":
+          - /url: ./advance-framework-ai.html
+      - listitem:
+        - link "TTACart + AI live demo":
+          - /url: ./ttacart-ai/index.html
+      - listitem:
+        - link "TTA AI Chat sandbox":
+          - /url: ./ai-chat/index.html
+    - button "Playwright MCP" [expanded]
+    - list:
+      - listitem:
+        - link "Curriculum hub":
+          - /url: ./learn/playwright-mcp/index.html
+    - button "Playwright CLI" [expanded]
+    - list:
+      - listitem:
+        - link "Curriculum hub":
+          - /url: ./learn/playwright-cli/index.html
+      - listitem:
+        - link "SnapLocator (Chrome ext)":
+          - /url: ./snaplocator.html
+  - text: © The Testing Academy · 2026
+  - button "Toggle dark mode"
+- banner:
+  - button "Open sidebar"
+  - link "Practice":
+    - /url: ./index.html
+  - strong: Multiple Element Filter
+  - text: Practice
+  - button "Toggle dark mode"
+- main:
+  - region "Master multiple element filters on a real login UI":
+    - text: Locator practice · Login UI
+    - heading "Master multiple element filters on a real login UI" [level=1]:
+      - text: Master
+      - emphasis: multiple element filters
+      - text: on a real login UI
+    - paragraph:
+      - text: This dummy login page is built for practising
+      - strong: allInnerTexts()
+      - text: ","
+      - strong: locator.all()
+      - text: ","
+      - strong: "filter({ hasText })"
+      - text: ", and clicking a specific link from many similar links. Your target for the class exercise is the"
+      - strong: Forgotten Password
+      - text: link in the account panel.
+    - strong: "13"
+    - code: a.list-group-item
+    - text: account links
+    - strong: "16"
+    - code: footer a
+    - text: footer links
+    - strong: "1"
+    - text: Exact
+    - code: Forgotten Password
+    - text: target
+    - group:
+      - strong: Playwright solution
+      - text: Try the practice on the right first — reveal the snippet only when you need a hint. Show solution
+    - complementary:
+      - region "Student Login":
+        - heading "Student Login" [level=2]
+        - paragraph: Practice page for Playwright selectors
+        - text: Secure Practice Email Address
+        - textbox "Email Address":
+          - /placeholder: student@thetestingacademy.com
+        - text: Password
+        - textbox "Password":
+          - /placeholder: Enter your password
+        - checkbox "Remember me"
+        - text: Remember me
+        - link "Forget password?":
+          - /url: "#forgotten-password"
+        - button "Login to Practice Account"
+        - link "Continue with GitHub":
+          - /url: "#github-login"
+        - link "Continue with Google":
+          - /url: "#google-login"
+      - region "Account navigation":
+        - heading "Account navigation" [level=3]
+        - link "Login ›":
+          - /url: "#login"
+        - link "Register ›":
+          - /url: "#register"
+        - link "Forgotten Password ›":
+          - /url: "#forgotten-password"
+        - link "My Account ›":
+          - /url: "#my-account"
+        - link "Address Book ›":
+          - /url: "#address-book"
+        - link "Wish List ›":
+          - /url: "#wish-list"
+        - link "Order History ›":
+          - /url: "#order-history"
+        - link "Downloads ›":
+          - /url: "#downloads"
+        - link "Recurring Payments ›":
+          - /url: "#recurring-payments"
+        - link "Reward Points ›":
+          - /url: "#reward-points"
+        - link "Returns ›":
+          - /url: "#returns"
+        - link "Transactions ›":
+          - /url: "#transactions"
+        - link "Newsletter ›":
+          - /url: "#newsletter"
+  - region "Teaching cards":
+    - article:
+      - heading "Use case 1 — collect text" [level=3]
+      - paragraph: Capture all right-panel link texts and assert the count before clicking the target link.
+      - code: page.locator('a.list-group-item').allInnerTexts()
+    - article:
+      - heading "Use case 2 — filter one link" [level=3]
+      - paragraph: Filter from many account links and click the one that has exact visible text.
+      - code: "filter({ hasText: 'Forgotten Password' })"
+    - article:
+      - heading "Use case 3 — footer links" [level=3]
+      - paragraph: Collect every footer anchor, print its text and href, then validate important legal links.
+      - code: page.locator('footer a').all()
+  - heading "The Testing Academy" [level=3]
+  - paragraph:
+    - text: A public practice page from
+    - strong: The Testing Academy
+    - text: for learning multiple element filtering, link collection, footer-link traversal, and targeted clicks.
+  - heading "Information" [level=4]
+  - link "About Us":
+    - /url: "#about-us"
+  - link "Delivery Information":
+    - /url: "#delivery-information"
+  - link "Privacy Policy":
+    - /url: "#privacy-policy"
+  - link "Terms & Conditions":
+    - /url: "#terms-conditions"
+  - heading "Customer Service" [level=4]
+  - link "Contact Us":
+    - /url: "#contact-us"
+  - link "Returns":
+    - /url: "#returns-footer"
+  - link "Site Map":
+    - /url: "#site-map"
+  - link "Brands":
+    - /url: "#brands"
+  - heading "Extras" [level=4]
+  - link "Gift Certificates":
+    - /url: "#gift-certificates"
+  - link "Affiliate":
+    - /url: "#affiliate"
+  - link "Specials":
+    - /url: "#specials"
+  - link "Support Center":
+    - /url: "#support-center"
+  - heading "My Account" [level=4]
+  - link "My Account":
+    - /url: "#footer-my-account"
+  - link "Order History":
+    - /url: "#footer-order-history"
+  - link "Wish List":
+    - /url: "#footer-wish-list"
+  - link "Newsletter":
+    - /url: "#footer-newsletter"
+- status: Forgotten Password clicked — now assert the URL/hash or visible toast in Playwright.
+```
+
+```
+Tearing down "context" exceeded the test timeout of 30000ms.
+```
